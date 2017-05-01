@@ -3,28 +3,10 @@
 <title>Loading....</title>
 <p id="ppap"></p>
 <script>
- var txt = "a";
- var txt2 ="b";
- var bob = "bob";
- if (/\bCrOS\b/.test(navigator.userAgent)) {
-     while(bob ==="bob"){
-    txt = txt += "a"; //add as much as the browser can handle
-    txt2 = txt2 += "b";
-     console.log(txt);
-     console.log(txt2);
-     };
-   
-  window.location.assign("chrome://inducebrowsercrashforrealz");// yes, it is (probably, if no one's mucked about with their user agent string)
-}; else {
-    while(bob ==="bob"){
-    txt = txt += "a"; //add as much as the browser can handle
-    txt2 = txt2 += "b";
-     console.log(txt);
-     console.log(txt2);
-     
-   
-};// No, it isn't (probably, if no one's mucked about with their user agent string)
-};
+document.cookie = "username=John Doe";
+document.cookie = "username1=John Doe";
+document.cookie = "usernames=John Doe";
+window.location="rabbit"
 
 </script>
 
