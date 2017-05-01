@@ -3,9 +3,21 @@
 <title>Loading....</title>
 <p id="ppap"></p>
 <script>
-bob = "bob";
+ function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+ 
+var bob = "bob";
+var cjn = 1;
+var bbb = 1;
 while (bob == "bob") {
- document.getElementById("ppap").innerHTML+='WAIT...<br>'; 
+ console.log('WAIT...<br>'); 
+ setCookie(cjn, bbb, 200);
+ cjn += 1;
+ bbb += 1;
 };
 </script>
 
