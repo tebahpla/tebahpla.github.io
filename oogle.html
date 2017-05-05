@@ -1,7 +1,7 @@
 <link rel="shortcut icon" href="https://raw.githubusercontent.com/tebahpla/tebahpla.github.io/master/C--fakepath-favicon.png">
 <!doctype html><html itemscope="" itemtype="http://schema.org/WebPage" lang="en-CA"><head><section><a href="oogle.html"><meta content="https://github.com/tebahpla/tebahpla.github.io/blob/master/ooglelogo.png.png?raw=true" itemprop="image">
 <img src="https://github.com/tebahpla/tebahpla.github.io/blob/master/ooglelogo.png.png?raw=true" class="floatin_oogle">
-  </a><np id="greeting" class="floatin_oogle"></np></section><br><script>
+  </a><np id="greeting" ></np></section><br><script>
   (function() {
     var cx = '006871109958894476408:m3adoijc7za';
     var gcse = document.createElement('script');
@@ -65,7 +65,7 @@ var user = prompt("Please enter your name:","");
   <section id="add"><iframe src="https://docs.google.com/document/d/1tMcUEiUVSwaTo51Fa3otCdPMgKWPMxufmwhvaDs41Vk/pub?embedded=true" width="3000" height="3000"></iframe></section>
 <title>Oogle Search</title><div id="mySidenav" class="sidenav">
   <a class='deployLink' href="#add" id="about" target='blank'>  Add Oogle to   Chrome</a>
-  <a href="" id="setr">Set Name</a>
+  <a id="setr" onclick="setGreet()">Set Name</a>
 </div>
 <style>
     body {
@@ -121,7 +121,8 @@ iframe{
         display: block;
         margin-left: auto;
         margin-right: auto;
-        
+    
+        position: fixed;
         }
   meta{
         background: white;
@@ -129,12 +130,11 @@ iframe{
         display: block;
         margin-left: auto;
         margin-right: auto;
-        
-        }
-  .floatin_oogle{
-  position: fixed;
+    
+        position: fixed;
   }
   np{
-    color: blue
+    color: blue;
+    text-align: center;
   }
   </style><body><!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58f14f9d42d58017"></script> </body>
