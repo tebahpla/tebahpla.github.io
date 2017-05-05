@@ -49,8 +49,7 @@ function setGreet(){
 var user = prompt("Wht would you like Oogle to call you?","Example Name");
        if (user != "" && user != null) {
            setCookie("username", user, 30);
-           document.getElementById("greeting").innerHTML="Welcome, " + user+".";
-           document.getElementById("setr").innerHTML="Change Name";
+           checkCookie();
        
 }
 
