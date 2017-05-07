@@ -36,17 +36,18 @@ function getCookie(cname) {
     }
     return "";
 }
+var user = "Example Name";
 function checkCookie() {
-    var user=getCookie("username");
+    user=getCookie("username");
     if (user != "") {
         document.getElementById("greeting").innerHTML="Welcome back, " + user+".";
         document.getElementById("setr").innerHTML="Change Name";
     } else {
-      
+      user = "Example Name"
     }
 }
 function setGreet(){
-var user = prompt("What would you like Oogle to call you?","Example Name");
+ user = prompt("What would you like Oogle to call you?",user);
        if (user != "" && user != null) {
            setCookie("username", user, 300);
            document.getElementById("greeting").innerHTML="Welcome, " + user+".";
