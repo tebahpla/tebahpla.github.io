@@ -28,7 +28,7 @@ var user = "Example Name";
 function checkCookie() {
     user=getCookie("username");
     if (user != "") {
-        document.getElementById("greeting").innerHTML="Welcome back, " + user+".";
+        document.getElementById("greeting").innerHTML="Let's get translating, " + user+"!";
         document.getElementById("setr").innerHTML="Change Name";
     } else {
       user = "Example Name"
@@ -38,7 +38,7 @@ function setGreet(){
  user = prompt("What would you like Oogle to call you?",user);
        if (user != "" && user != null) {
            setCookie("username", user, 300);
-           document.getElementById("greeting").innerHTML="Let's get translating, " + user+"!";
+           document.getElementById("greeting").innerHTML="Welcome, " + user+".";
            document.getElementById("setr").innerHTML="Change Name";
            
        
