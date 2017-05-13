@@ -59,14 +59,12 @@ iframe{
     
         }
   meta{
-        max-width: 100%;
-    height: auto;
-    background: white;
+        background: white;
         color: white;
         display: block;
-        margin-left: auto;
-        margin-right: auto;
-          position: fixed;
+        right: 0;
+        left:0;
+    position: fixed
         
   }
   np{
