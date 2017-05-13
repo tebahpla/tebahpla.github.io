@@ -1,0 +1,81 @@
+body {
+        }
+  #mySidenav a {
+    position: fixed;
+    right: -188px;
+    transition: 0.5s;
+    padding: 20px;
+    width: 170px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 5px 5px 5px 5px;
+}
+/* sidebar */
+#mySidenav a:hover {
+    right: 0;
+}
+#hideMe{
+  transition: opacity 0.3s;
+  
+}
+
+#about {
+    top: 240px;
+    background-color: purple;
+}
+
+#setr {
+    top: 300px;
+    background-color: #2196F3;
+    cursor: pointer;
+  }
+
+#projects {
+    top: 360px;
+    background-color: #f44336;
+}
+
+#contact {
+    top: 200px;
+    background-color: #555
+}/* sidebar over */
+iframe{
+  
+  border-color: white;  
+  
+}
+
+    img {
+        max-width: 100%;
+    height: auto;
+    background: white;
+        color: white;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    
+    
+        }
+  meta{
+        max-width: 100%;
+    height: auto;
+    background: white;
+        color: white;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        
+  }
+  np{
+    color: blue;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  iframe{
+  
+  border-color: white;  
+  
+}
