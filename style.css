@@ -70,6 +70,9 @@ iframe{
   iframe{
   
   border-color: white;  
+      display: block;
+        margin-left: auto;
+        margin-right: auto;
   
 }
 a{
