@@ -1,4 +1,4 @@
-    body {
+body {
         }
   #mySidenav a {
     position: fixed;
@@ -36,7 +36,10 @@
     top: 200px;
     background-color: #555
 }/* sidebar over */
-
+iframe{
+  
+  border-color: white;  
+  
 }
     img {
         background: white;
@@ -44,8 +47,6 @@
         display: block;
         margin-left: auto;
         margin-right: auto;
-        margin: 0,auto;
-        
     
     
         }
@@ -55,7 +56,6 @@
         display: block;
         margin-left: auto;
         margin-right: auto;
-        margin: 0,auto;
     
         
   }
@@ -75,3 +75,4 @@
 a{
     text-decoration: none;
 }
+
