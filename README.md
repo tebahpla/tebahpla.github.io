@@ -1,3 +1,3 @@
 <script>
-window.location="oogle.html";
+window.location="oogle";
 </script>
