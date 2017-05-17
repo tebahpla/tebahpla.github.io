@@ -29,7 +29,7 @@ body {
 #setr {
     top: 300px;
     background-color: #2196F3;
-    cursor: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEOt0Yib3z0dVMcEFbr9jSjL3ojDIbHLjiHWsiAZig96xBTX4ObyObxn29'), auto;	
+    cursor: pointer
   }
 #projects {
     top: 360px;
