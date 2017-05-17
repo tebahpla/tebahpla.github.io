@@ -1,5 +1,5 @@
 input{
- cursor:pointer;       
+ cursor: url('https://raw.githubusercontent.com/tebahpla/tebahpla.github.io/master/C--fakepath-Untitled.png');       
 }
 body {
         }
@@ -29,7 +29,7 @@ body {
 #setr {
     top: 300px;
     background-color: #2196F3;
-    cursor: pointer
+    cursor: url('https://raw.githubusercontent.com/tebahpla/tebahpla.github.io/master/C--fakepath-Untitled.png');
   }
 #projects {
     top: 360px;
@@ -77,5 +77,8 @@ iframe{
 }
 a{
     text-decoration: none;
+}
+button{
+ cursor: url('https://raw.githubusercontent.com/tebahpla/tebahpla.github.io/master/C--fakepath-Untitled.png');
 }
 
