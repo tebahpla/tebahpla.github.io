@@ -1,5 +1,5 @@
 input{
- cursor: url('https://raw.githubusercontent.com/tebahpla/tebahpla.github.io/master/C--fakepath-Untitled.png');       
+ cursor: pointer;      
 }
 body {
         }
@@ -79,6 +79,6 @@ a{
     text-decoration: none;
 }
 button{
- cursor: url('https://raw.githubusercontent.com/tebahpla/tebahpla.github.io/master/C--fakepath-Untitled.png');
+ cursor: pointer;
 }
 
