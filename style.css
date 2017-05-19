@@ -84,6 +84,7 @@ iframe{
 a{
     text-decoration: none;
     color: blue;
+    cursor: pointer;
 }
 button{
  cursor: pointer;
