@@ -11,33 +11,39 @@ body {
     width: 170px;
     text-decoration: none;
     font-size: 20px;
-    color: white;
+    color: white !important;
     border-radius: 5px 5px 5px 5px;
 }
 /* sidebar */
 #mySidenav a:hover {
     right: 0;
+ color: white !important;
 }
 #hideMe{
   transition: opacity 0.3s;
+ 
   
 }
 #about {
     top: 240px;
     background-color: purple;
+ color: white !important;
 }
 #setr {
     top: 300px;
     background-color: #2196F3;
-    cursor: url('https://raw.githubusercontent.com/tebahpla/tebahpla.github.io/master/C--fakepath-Untitled.png');
+    cursor:pointer;
+ color: white !important;
   }
 #projects {
     top: 360px;
     background-color: #f44336;
+    color: white !important;
 }
 #contact {
     top: 200px;
     background-color: #555
+     color: white !important;
 }/* sidebar over */
 iframe{
   
@@ -77,6 +83,7 @@ iframe{
 }
 a{
     text-decoration: none;
+    color: blue;
 }
 button{
  cursor: pointer;
