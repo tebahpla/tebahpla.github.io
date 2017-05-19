@@ -1,3 +1,6 @@
+.support{
+ display: none;
+}
 input{
  cursor: pointer;      
 }
