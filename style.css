@@ -92,4 +92,6 @@ a{
 button{
  cursor: pointer;
 }
-
+p{
+color: black !important;
+}
