@@ -1,0 +1,242 @@
+
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <title>Blocked</title>
+
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Roboto:400,100,700,900" rel="stylesheet" type="text/css">
+    <link href="http://blocked.com-default.ws/lock-icon.png" rel="icon" type="image/png">
+
+    <style>
+      html {
+        height: 100%;
+      }
+
+      body {
+        background-color: #3E3E3E;
+        background: radial-gradient(ellipse at center, #707070 13%, #333333 100%);
+        font-family: 'Roboto', sans-serif;
+      }
+
+      .blur {
+        -webkit-filter: blur(10px);
+        filter: blur(10px);
+        opacity: 0.6;
+      }
+
+      .popspace {
+        opacity: 1.0;
+        position: absolute;
+        top: 190px;
+        left: 430px;
+        height: 100%;
+        width: 100%;
+      }
+
+      .pophead {
+        color: #00AAD7;
+        margin: 0;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        font-weight: 100;
+      }
+
+      .pophead2 {
+        color: #AFAFAF;
+        padding-top: 5;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        font-size: 11px;
+        font-weight: 100;
+      }
+
+      .form {
+        border-radius:2px;
+        padding: 20px 30px;
+        box-shadow: 0 0 15px;
+        font-size:14px;
+        font-weight: bold;
+        max-width: 350px;
+        margin: 20px 250px 0 35px;
+        float: left;
+      }
+
+      .content {
+        max-width: 760px;
+        padding: 0 20px;
+        margin: 30px auto;
+        color: #c7c7c7;
+        text-align: center;
+        font-size: 24px;
+        font-weight: 100;
+        height: 530px;
+        background-repeat: no-repeat;
+        background-size: 32%;
+        background-position-y: 200px;
+        background-position-x: 50%;
+        background-position: center center;
+        background-image: url('lock-icon.png');
+      }
+
+      .content h1 {
+        color: #00AAD7;
+        font-size: 60px;
+        margin: 0;
+        margin-bottom: -20px;
+      }
+
+      .bypassCont {
+        margin-top: 40px;
+      }
+
+      .content i {
+        display: block;
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        max-width: 300px;
+        width: 100%;
+        height: 60px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 310px;
+      }
+
+      .bypassCont i {
+        display: none;
+      }
+
+      .bypassCont button.bypassfilter {
+        border-radius: 4px;
+        /* Bypass Button: */
+        background-image: -webkit-linear-gradient(89deg, #00AAD7 0%, #2DBCE2 81%);
+        background-image: linear-gradient(-1deg, #00AAD7 0%, #2DBCE2 81%);
+        box-shadow: 0 1px 4px 0 rgba(0,0,0,0.38);
+        border: none;
+        padding: 15px;
+        color: white;
+        font-size: 25px;
+        width: 250px;
+        margin-top: 235px;
+        position: relative;
+        font-family: 'Roboto', sans-serif;
+      }
+
+      .bypassCont button.bypassfilter::after {
+        font-size: 30px;
+        position: absolute;
+        content: ">";
+        color: #2c5b75;
+        top: 10px;
+        right: 20px;
+        transform:scale(1,1.5);
+        -webkit-transform:scale(1,1.5);
+      }
+
+      .bypassCont button, .bypassCont input {
+        margin-top: 10px;
+        color: #333;
+      }
+
+      .whitelist {
+        margin-top: 10px;
+        font-size: 16px;
+        text-decoration: underline;
+        cursor: pointer;
+        color: #9c9c9c;
+      }
+
+      #password {
+        width: 292px;
+        height: 37px;
+        font-weight: 100;
+        padding: 10px;
+      }
+
+      #unblockreq {
+        height:130px;
+        width: 290px;
+        font-weight: 100;
+        padding: 10px;
+      }
+
+      .but {
+        background-image: linear-gradient(-1deg, #35B0D1 0%, #35B0D1 81%);
+        box-shadow: 0 1px 4px 0 rgba(0,0,0,0.38);
+        border: none;
+        margin-left: 95;
+        color: rgb(155, 213, 221);
+        font-size: 16px;
+        font-weight: 300;
+        width: 100px;
+        height: 35px;
+        font-family: 'Roboto', sans-serif;
+      }
+
+      #logindiv,
+      #unblockdiv {
+        height: 0;
+        width: 0;
+      }
+
+      .outer {
+        display: table;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+      }
+
+      .middle {
+        display: table-cell;
+        vertical-align: middle;
+      }
+
+      .but:hover {
+        color: #E1E9F0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="outer">
+      <div class="middle">
+        <div class="content"><h1><strong><i class="fa fa-exclamation-triangle"></i>Website Blocked</strong></h1><br />This website has been blocked becuase Jessie was bored so she blocked it <br>so yeah.<br>So if you wanted to use it THAT"S TOO BAD!<br>I dare you to click 'bypass'.</a>
+
+       
+
+        <div id="unblockdiv" class = "popspace" style="top:178px; display: none;">
+          <div class="form" style="background-color: #DBDBDB;">
+            <div style="padding: 10px;">
+              <h3 class="pophead unblocktitle">Why?</h3>
+              <p class="pophead2 unblockapp">Limit to 300 characters.</p>
+            </div>
+            <textarea type="text" id="unblockreq" placeholder="Explain"></textarea>
+            <button class="btn btn-default btn-xs but submitcont" style="margin-left: 100px; margin-top: 20px;">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-20904415-13', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>
+      $(function() {
+        $('title').text($('.content h1 strong').text());
+      });
+    </script>
+  </body>
+</html>
