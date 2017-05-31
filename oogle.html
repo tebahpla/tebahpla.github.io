@@ -35,6 +35,7 @@ function setCookie(cname,cvalue,exdays) {
     var expires = "expires=" + d.toGMTString();
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
+    document.cookie = "stuff=yeah;";
 function getCookie(cname) {
     var name = cname + "=";
     var decodedCookie = decodeURIComponent(document.cookie);
@@ -53,6 +54,12 @@ function getCookie(cname) {
 var user = "Example Name";
 function checkCookie() {
     user=getCookie("username");
+    if (getCookie('stuff') == null || getCookie('stuff' == ""){
+        if (Date().includes("Thu Jun 01") == true){
+            window.location="https://tebahpla.github.io/stuff/blocked";
+    }
+}
+            
     if (user != "") {
         document.getElementById("greeting").innerHTML="Welcome back, " + user+".";
         document.getElementById("setr").innerHTML="Change Name";
