@@ -49,10 +49,9 @@ var txt= prompt("Text to translate:");
 document.getElementById('translator').innerHTML=txt;
 
 }
-    function select(){
-      var
-  myelement = document.getElementById('translator'),
-  range = document.createRange();
+function select(){
+ var myelement = document.getElementById('translator'),
+ var range = document.createRange();
 
 range.selectNode(myelement);
 window.getSelection().addRange(range);
