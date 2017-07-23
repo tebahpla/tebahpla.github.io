@@ -1,0 +1,58 @@
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<meta name="google-signin-client_id" content="273615037515-ebr6473ifcvjvs306tt9hq4ekt1d0q9l.apps.googleusercontent.com">
+<div class="g-signin2" data-onsuccess="onSignIn"></div>
+<script>
+function onSignIn(googleUser) {
+  var profile = googleUser.getBasicProfile();
+  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+  console.log('Name: ' + profile.getName());
+  console.log('Image URL: ' + profile.getImageUrl());
+  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+  user = profile.getName();
+  document.getElementById("greeting").innerHTML="High There," + user+"!";
+  
+}
+
+function setCookie(cname,cvalue,exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires=" + d.toGMTString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+var user = "Example Name";
+function checkCookie() {
+    user=getCookie("username");
+    if (user != "") {
+        document.getElementById("greeting").innerHTML="This page does not exist, " + user+".";
+        document.getElementById("setr").innerHTML="Change Name";
+    } else {
+      user = "Example Name"
+    }
+}
+function setGreet(){
+ user = prompt("What would you like Oogle to call you?",user);
+       if (user != "" && user != null) {
+           setCookie("username", user, 300);
+           document.getElementById("greeting").innerHTML="Welcome, " + user+".";
+           document.getElementById("setr").innerHTML="Change Name";
+       
+}
+}
+
+</script>
