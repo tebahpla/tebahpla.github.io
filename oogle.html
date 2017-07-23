@@ -43,6 +43,7 @@ function onSignIn(googleUser) {
   console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
   user = profile.getName();
   document.getElementById("greeting").innerHTML="Welcome, " + user+".";
+   setCookie("username", user, 3000);
   document.getElementById('sss').innerHTML=' | <a href="#" onclick="signOut();" >Sign out</a> ';
   document.getElementById('logg').style.display = 'none';
 }
@@ -78,7 +79,7 @@ function checkCookie() {
 function setGreet(){
  user = prompt("What would you like Oogle to call you?",user);
        if (user != "" && user != null) {
-           setCookie("username", user, 300);
+           setCookie("username", user, 3000);
            document.getElementById("greeting").innerHTML="Welcome, " + user+".";
            document.getElementById("setr").innerHTML="Change Name";
        
