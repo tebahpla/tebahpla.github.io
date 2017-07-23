@@ -43,7 +43,7 @@ function onSignIn(googleUser) {
   console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
   user = profile.getName();
   document.getElementById("greeting").innerHTML="Welcome, " + user+".";
-  document.getElementById('sss').innerHTML='<a href="#" onclick="signOut();">Sign out</a> '
+  document.getElementById('sss').innerHTML=' | <a href="#" onclick="signOut();">Sign out</a> '
 }
     
 function getCookie(cname) {
