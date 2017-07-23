@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <style>
 .black_overlay {
-  display: none;
+  display: block;
   position: absolute;
   top: 0%;
   left: 0%;
@@ -14,7 +14,7 @@
   filter: alpha(opacity=80);
 }
 .white_content {
-  display: none;
+  display: block;
   position: absolute;
   top: 25%;
   left: 25%;
@@ -27,9 +27,7 @@
   overflow: auto;
 }
 </style>
-<script>
-document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'
-</script>
+
 <div id="light" class="white_content"><h1>Thanks For Logging In!</h1><br><a href="oogle.html" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'"><button>Close</a></button>
   </div>
   <div id="fade" class="black_overlay"></div>
