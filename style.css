@@ -96,6 +96,8 @@ iframe{
     margin-left: auto;
     margin-right: auto;
     text-decoration :none;
+	  font-family: 'TypefaceEOT', 'TypefaceTTF', 'TypefaceSVG';
+	  margin: 0 0 30px 0;
   }
   iframe{
   
