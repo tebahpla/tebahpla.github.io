@@ -15,31 +15,11 @@
 </script>
    <script>
 
+   if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1){
+    document.getElementById("mySidenav").innerHTML='<a class="deployLink" href="https://tebahpla.github.io/addtofirefox.html" id="about" target="blank">  Add Oogle to  Firefox</a><a id="setr" onclick="setGreet()">Set Name</a>';
+}
     
-    if((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1 ) 
-    {
-        //nothing
-    }
-    else if(navigator.userAgent.indexOf("Chrome") != -1 )
-    {
-        //this is the default
-    }
-    else if(navigator.userAgent.indexOf("Safari") != -1)
-    {
-        //nothing
-    }
-    else if(navigator.userAgent.indexOf("Firefox") != -1 ) 
-    {
-         document.getElementById("mySidenav").innerHTML='<a class="deployLink" href="https://tebahpla.github.io/addtofirefox.html" id="about" target="blank">  Add Oogle to  Firefox</a><a id="setr" onclick="setGreet()">Set Name</a>';
-    }
-    else if((navigator.userAgent.indexOf("MSIE") != -1 ) || (!!document.documentMode == true )) //IF IE > 10
-    {
-      //not compatible yet
-    }  
-    else 
-    {
-       //do nothing if it doesn't know
-    };
+    
     
     </script>
   <script>
