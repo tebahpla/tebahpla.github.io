@@ -1,3 +1,10 @@
+.gsc-clear-button{
+ display:none !important;
+}
+.cse input.gsc-input,input.gsc-input{
+background-image:none !important;
+height:30px !important;
+}
 .support{
  display: none;
 	font-family: 'TypefaceEOT', 'TypefaceTTF', 'TypefaceSVG';
