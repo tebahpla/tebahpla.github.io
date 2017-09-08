@@ -1,7 +1,12 @@
 <link rel="shortcut icon" href="https://raw.githubusercontent.com/tebahpla/tebahpla.github.io/master/C--fakepath-favicon.png">
 <!doctype html><html itemscope="" itemtype="http://schema.org/WebPage" lang="en-CA"><head><section id="image"><a href="oogle"><meta content="https://github.com/tebahpla/tebahpla.github.io/blob/master/alternite_logos/bounceoogle.png?raw=true" itemprop="image" draggable="true">
 <img src="https://github.com/tebahpla/tebahpla.github.io/blob/master/ooglelogo.png.png?raw=true" class="floatin_oogle" draggable="true">
-  </a></section><np id="greeting" ondblclick="setGreet()" draggable="true"></np><br><script src="https://apis.google.com/js/platform.js" async defer></script>
+  </a></section><np id="greeting" ondblclick="setGreet()" draggable="true"></np><br><script src="https://apis.google.com/js/platform.js" async defer></script><script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+<style>
+  
+  .speech  { width: 40px; border: none }
+  #transcript{ display: none}
+</style>
 <meta name="google-signin-client_id" content="273615037515-ebr6473ifcvjvs306tt9hq4ekt1d0q9l.apps.googleusercontent.com"><script>
   (function() {
     var cx = '006871109958894476408:m3adoijc7za';
@@ -15,7 +20,34 @@
 </script>
 <script src='https://tebahpla.github.io/speech-recognition/speachreck.js'></script>
   <link rel='stylesheet' href='https://tebahpla.github.io/speech-recognition/speachreck.css'>
+<script>
+  function startDictation() {
 
+    if (window.hasOwnProperty('webkitSpeechRecognition')) {
+
+      var recognition = new webkitSpeechRecognition();
+
+      recognition.continuous = false;
+      recognition.interimResults = false;
+
+      recognition.lang = "en-US";
+      recognition.start();
+
+      recognition.onresult = function(e) {
+        document.getElementById('transcript').value
+                                 = e.results[0][0].transcript;
+        recognition.stop();
+    document.getElementById("myForm").submit();
+      };
+
+      recognition.onerror = function(e) {
+      responsiveVoice.speak('there has been a speech recognition error. if you are using internet explorer or microsoft edge, then use chrome.');
+
+}
+
+    }
+  }
+</script>
   <script>
     var n = Date().includes("Sun Jul 30");
     var m = Date().includes("Wed Jul 05");
@@ -111,7 +143,12 @@ function signOut() {
   }
 
 </script>
-                     <gcse:search linkTarget="_blank" resultSetSize="large" imageSearchResultSetSize="large"	><b><img src="https://github.com/tebahpla/tebahpla.github.io/blob/master/Ooglething.jpg?raw=true" alt="Ooglething.jpg"/><br>Loading....</b><br><br><br><br></gcse:search>  <br><h1 id="🖕🖕🖕🖕🖕" class="support" title="🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕">🖕🖕🖕🖕🖕 <br> YOU WOULD GET IT IF YOU WENT TO BILLINGS!</h1>                              
+                     <gcse:search linkTarget="_blank" resultSetSize="large" imageSearchResultSetSize="large"	><b><img src="https://github.com/tebahpla/tebahpla.github.io/blob/master/Ooglething.jpg?raw=true" alt="Ooglething.jpg"/><br>Loading....</b><br><br><br><br></gcse:search> <br> <form  id='myForm' action="https://tebahpla.github.io/oogle">
+  
+    <input type="text" name="q" id="transcript" placeholder="Speak" />
+    <img onclick="startDictation()" class='speech' src="//i.imgur.com/cHidSVu.gif" />
+  
+</form>  <br><h1 id="🖕🖕🖕🖕🖕" class="support" title="🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕">🖕🖕🖕🖕🖕 <br> YOU WOULD GET IT IF YOU WENT TO BILLINGS!</h1>                              
 
   <br><br><br><nobr><p nowrap> <br><a href="translate">Translate</a> | <a href="https://tebahpla.github.io/drive">Drive</a> | <a href='https://vincens2005.github.io/t-rex-runner/'>Dinosaur Game</a> | <a href="calc">Calculator</a> | <a href="maps">Maps</a> | <a href="roamos">Roam OS</a>  |  <a href="https://tebahpla.github.io/powerpoop/PowerPoop">PowerPoop</a> | <a href='https://www.waze.com/ul?acvp=D7CBB7D3-A272-4F10-9144-B51B464C4E97' title='Using Waze. If you have the waze app then you can have Beerie give you driving instructions. Otherwise, you should get Waze.'>Beerie GPS Voice</a> | <a  onclick="flipoff('🖕🖕🖕🖕🖕')" >Support</a><jibber id='sss'></jibber><nobr> <div class="g-signin2" data-onsuccess="onSignIn" data-longtitle="true" id='logg' title='Ironically, you can sign in with Google.' nowrap></div></nobr></p></nobr><br><br><br><br><br><br><br><br>
   
