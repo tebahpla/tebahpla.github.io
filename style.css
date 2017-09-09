@@ -15,7 +15,7 @@ input{
     padding: 10px;
     margin: 10px;
     height: 20px;
-    width: 500px;
+   
     border:1px solid #eaeaea;
     outline:none;
 }
@@ -34,7 +34,7 @@ input[type="submit"] {
     cursor: pointer;
     font-size: 14px;
     font-weight: bold;
-    width: 100px;
+    
     padding: 0 16px;
     height:36px;
 }
