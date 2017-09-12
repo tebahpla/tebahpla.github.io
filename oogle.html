@@ -5,8 +5,31 @@
 <style>
   
   .speech  { width: 40px; border: none; cursor: pointer;}
-  #transcript{ display: none}
-  #speaknow { text-align: center; cursor: pointer;}
+ 
+  #speaknow { text-align: center; cursor: progress;}
+  input[type=search] {
+    width: 130px !important;
+    box-sizing: border-box !important;
+    border: 2px solid #ccc !important;
+    border-radius: 4px !important;
+    font-size: 16px !important;
+    
+    padding: 12px 40px 12px 20px !important;
+    -webkit-transition: width 0.4s ease-in-out !important;
+    transition: width 0.4s ease-in-out !important;
+}
+input[type=search]:hover {
+    width: 80% ;
+}
+input[type=search]:focus {
+    width: 60% ;
+}
+
+
+input[type=search]:active {
+    width: 100%;
+}
+
 </style>
 <meta name="google-signin-client_id" content="273615037515-ebr6473ifcvjvs306tt9hq4ekt1d0q9l.apps.googleusercontent.com"><script>
   (function() {
@@ -145,9 +168,14 @@ function signOut() {
   }
 
 </script>
-                     <gcse:search linkTarget="_blank" resultSetSize="large" imageSearchResultSetSize="large"	><b><img src="https://github.com/tebahpla/tebahpla.github.io/blob/master/Ooglething.jpg?raw=true" alt="Ooglething.jpg"/><br>Loading....</b><br><br><br><br></gcse:search> <br> <form  id='myForm' action="https://tebahpla.github.io/oogle">
+  <center>
+<form action='oogle' id='myForm'>
+  <input type="search" name="search" placeholder="Search The Web" id='transcript'>
+</form>
+</center>
+                     <gcse:searchresults-only linkTarget="_blank" resultSetSize="large" imageSearchResultSetSize="large"	><b><img src="https://github.com/tebahpla/tebahpla.github.io/blob/master/Ooglething.jpg?raw=true" alt="Ooglething.jpg"/><br>Loading....</b><br><br><br><br></gcse:searchresults-only> <br> 
   
-    <input type="text" name="q" id="transcript" placeholder="Speak" />
+    
     <img onclick="startDictation()" class='speech' src="mic.png" />
   
   </form> <h2 id='speaknow'></h2> <br><h1 id="🖕🖕🖕🖕🖕" class="support" title="🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕🖕">🖕🖕🖕🖕🖕 <br> YOU WOULD GET IT IF YOU WENT TO BILLINGS!</h1>                              
