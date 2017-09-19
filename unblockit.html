@@ -5,11 +5,9 @@
 hi
 </body>
 <script>
-var pre = prompt('what blocked website do you want to temporarily acess? \n\ USE THE EXACT URL INCLUDING THE http:// PAART \n\ you can click "bypass" on the blocked page to copy the url. simly add "http://" to the beginning and paste it in!');
-var url;
-if ( pre.includes('http://')== true || pre.includes('https://')== true){
- url = pre;
-};
+var url = prompt('what blocked website do you want to temporarily acess? \n\ USE THE EXACT URL INCLUDING THE http:// PAART \n\ you can click "bypass" on the blocked page to copy the url. simly add "http://" to the beginning and paste it in!');
+
+
 
 document.body.innerHTML="<iframe src="+url+" width='5000' height='1000'></iframe>";
 </script>
