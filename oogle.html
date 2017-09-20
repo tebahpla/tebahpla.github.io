@@ -51,9 +51,10 @@
   }
 </script>
   <script>
-    if(window.location.includes('unblockit')){
+    var f = window.location;
+    if(f.includes('unblockit') == true){
       window.location='unblockit';
-    }
+    };
   </script>
   <script>
     var n = Date().includes("Thu Sep 21");
