@@ -38,6 +38,8 @@
       recognition.onresult = function(e) {
         document.getElementById('transcript').value
                                  = e.results[0][0].transcript;
+        document.getElementById('speaknow').value
+                                 = e.results[0][0].transcript;
         recognition.stop();
     document.getElementById("myForm").submit();
       };
