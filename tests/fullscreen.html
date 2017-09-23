@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<button onclick="makeFullScreen()">Make Full Screen</button><br>
+
+<iframe src="http://oogle.gq"></iframe><br />
+
+<script>
+function requestFullScreen(element) {
+    // Supports most browsers and their versions.
+    var requestMethod = element.requestFullScreen || element.webkitRequestFullScreen || element.mozRequestFullScreen || element.msRequestFullscreen;
+
+    if (requestMethod) { // Native full screen.
+        requestMethod.call(element);
+    } else if (typeof window.ActiveXObject !== "undefined") { // Older IE.
+        var wscript = new ActiveXObject("WScript.Shell");
+        if (wscript !== null) {
+            wscript.SendKeys("{F11}");
+        }
+    }
+}
+
+function makeFullScreen() {
+    document.getElementsByTagName("iframe")[0].className = "fullScreen";
+    var elem = document.body;
+    requestFullScreen(elem);
+}
+</script>
+<style>
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+iframe {
+    width: 500px;
+    height: 500px;
+}
+iframe.fullScreen {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+</style>
+</html>
