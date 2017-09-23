@@ -10,15 +10,7 @@ background-image:none !important;
 	font-family: 'TypefaceEOT', 'TypefaceTTF', 'TypefaceSVG';
 	  margin: 0 0 30px 0;
 }
-input{
-    border: none;
-    padding: 10px;
-    margin: 10px;
-    height: 35px;
-   
-    border:1px solid #eaeaea;
-    outline:none;
-}
+
 input:hover{
     border-color: #a0a0a0 #b9b9b9 #b9b9b9 #b9b9b9;
 }
