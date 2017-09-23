@@ -2,7 +2,46 @@
 <!doctype html><html itemscope="" itemtype="http://schema.org/WebPage" lang="en-CA"><head><section><a href="drive"><meta content="https://github.com/tebahpla/tebahpla.github.io/blob/master/oogledrive.png?raw=true" itemprop="image">
 <img src="https://github.com/tebahpla/tebahpla.github.io/blob/master/oogledrive.png?raw=true" class="floatin_oogle"><br>
   </a><np id="greeting" translate="no"></np></section>
+ 
   <script>
+function requestFullScreen(element) {
+    // Supports most browsers and their versions.
+    var requestMethod = element.requestFullScreen || element.webkitRequestFullScreen || element.mozRequestFullScreen || element.msRequestFullscreen;
+
+    if (requestMethod) { // Native full screen.
+        requestMethod.call(element);
+    } else if (typeof window.ActiveXObject !== "undefined") { // Older IE.
+        var wscript = new ActiveXObject("WScript.Shell");
+        if (wscript !== null) {
+            wscript.SendKeys("{F11}");
+        }
+    }
+}
+
+function makeFullScreen() {
+    document.getElementsByTagName("iframe")[0].className = "fullScreen";
+    var elem = document.body;
+    requestFullScreen(elem);
+}
+</script>
+<style>
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+iframe {
+    width: 500px;
+    height: 500px;
+}
+iframe.fullScreen {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+</style><script>
 function setCookie(cname,cvalue,exdays) {
     var d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
@@ -50,7 +89,10 @@ function setGreet(){
 Arrow keys to move.<br>
 Space to shoot.<br>
 KILL THE EVIL POOP EMOJIS!<br>
-Don't let them touch you though. then you die.</p><iframe width="1000" height="1000" src="//scratch.mit.edu/projects/embed/162766928/?autostart=false" frameborder="0" scrolling="no" align="middle" allowfullscreen="true" allowfullscreen></iframe><br>
+Don't let them touch you though. then you die.</p><div class="buttonHolder">
+  <input value="Fullscreen" title="Go into fullscreen mode" type="submit" onclick='makeFullScreen()' > 
+  
+</div><iframe width="1000" height="1000" src="//scratch.mit.edu/projects/embed/162766928/?autostart=false" frameborder="0" scrolling="no" align="middle" allowfullscreen="true" allowfullscreen></iframe><br>
  
 
   <br><br><br><p> <br> <a href="oogle" translate="no">Search</a> | <a href="calc">Calculator</a> | <a href="calc">Calculator</a> | <a href="translate">Translate</a> | <a href="roamos" translate="no">Roam OS</a>  |  <a href="https://tebahpla.github.io/powerpoop/PowerPoop" translate="no">PowerPoop</a>  </p><br><br><br><br><br><br><br><br>
