@@ -1,0 +1,65 @@
+<! doctype html>
+<head>
+<script>
+  (function() {
+    var cx = '006871109958894476408:m3adoijc7za';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<script>
+function setCookie(cname,cvalue,exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires=" + d.toGMTString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+var user = "Example Name";
+function checkCookie() {
+    user=getCookie("username");
+    
+            
+    if (user != "") {
+        document.getElementById("greeting").innerHTML="Welcome back, " + user+".";
+        document.getElementById("setr").innerHTML="Change Name";
+        
+    } else {
+      user = "Example Name"
+    }
+}
+function setGreet(){
+ user = prompt("What would you like Oogle to call you?",user);
+       if (user != "" && user != null) {
+           setCookie("username", user, 3000);
+           document.getElementById("greeting").innerHTML="Welcome, " + user+".";
+           document.getElementById("setr").innerHTML="Change Name";
+       
+}
+}
+</script>
+</head><body>
+<section id="image"><a href="oogle"><meta content="https://github.com/tebahpla/tebahpla.github.io/blob/master/alternite_logos/bounceoogle.png?raw=true" itemprop="image" draggable="true">
+<img src="https://github.com/tebahpla/tebahpla.github.io/blob/master/ooglelogo.png.png?raw=true" class="floatin_oogle" draggable="true">
+  </a></section><br>
+<gcse:search linkTarget="_blank" resultSetSize="large" imageSearchResultSetSize="large"	><b><img src="https://github.com/tebahpla/tebahpla.github.io/blob/master/Ooglething.jpg?raw=true" alt="Ooglething.jpg"/><br>Loading....</b><br><br><br><br></gcse:search>
+<!-- Go to www.addthis.com/dashboard to customize your tools --> 
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58f14f9d42d58017"></script>
+</body>
