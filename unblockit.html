@@ -1,6 +1,37 @@
 <!DOCTYPE html>
 <html>
+<script>
+function requestFullScreen(element) {
+    // Supports most browsers and their versions.
+    var requestMethod = element.requestFullScreen || element.webkitRequestFullScreen || element.mozRequestFullScreen || element.msRequestFullscreen;
 
+    if (requestMethod) { // Native full screen.
+        requestMethod.call(element);
+    } else if (typeof window.ActiveXObject !== "undefined") { // Older IE.
+        var wscript = new ActiveXObject("WScript.Shell");
+        if (wscript !== null) {
+            wscript.SendKeys("{F11}");
+        }
+    }
+}
+
+function makeFullScreen() {
+    document.getElementsByTagName("iframe")[0].className = "fullScreen";
+    var elem = document.body;
+    requestFullScreen(elem);
+}
+</script>
+<style>
+
+iframe.fullScreen {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+</style>
+  
 <body>
 hi
 </body>
@@ -9,6 +40,6 @@ var url = prompt('what blocked website do you want to temporarily acess? \n\ USE
 
 
 
-document.body.innerHTML="<iframe src="+url+" width='1000' height='1000'></iframe>";
+document.body.innerHTML="<button onclick='makeFullScreen()'<iframe src="+url+" width='1000' height='1000'></iframe>";
 </script>
 </html>
