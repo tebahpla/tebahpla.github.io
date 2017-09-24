@@ -1,9 +1,8 @@
-* {
-  box-sizing: border-box;
+box-sizing: border-box;
 }
+
 body, html {
   font-family: "Arial", sans-serif;
- 
 }
 
 button {
@@ -16,31 +15,30 @@ button {
   background-color: #F2F2F2;
   background-image: -webkit-linear-gradient(top, #F5F5F5, #F1F1F1);
   background-image: -moz-linear-gradient(top, #F5F5F5, #F1F1F1);
-  &:hover {
-    border-color: darken(#DCDCDC, 5%);
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 1px;
-    background-image: -webkit-linear-gradient(top, #f8f8f8, #F1F1F1);
-    background-image: -moz-linear-gradient(top, #f8f8f8, #F1F1F1);
-  }
-  &:active {
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 1px;
-    outline: none !important;
-  }
-  &:focus {
-    outline: 1px #08c solid;
-  }
-  ul {
-    margin-top: 0;
-    padding: 0;
-    
-    list-style: none;
-    -webkit-transition: margin-top .45s ease-in-out;
-    -moz-transition: margin-top .45s ease-in-out;
-    transition: margin-top .45s ease-in-out;
-    li {
-      display: block;
-      height: 55px;
-      padding: 1em;
-    }
-  }
+}
+button:hover {
+  border-color: #cfcfcf;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 1px;
+  background-image: -webkit-linear-gradient(top, #f8f8f8, #F1F1F1);
+  background-image: -moz-linear-gradient(top, #f8f8f8, #F1F1F1);
+}
+button:active {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 1px;
+  outline: none !important;
+}
+button:focus {
+  outline: 1px #08c solid;
+}
+button ul {
+  margin-top: 0;
+  padding: 0;
+  list-style: none;
+  -webkit-transition: margin-top .45s ease-in-out;
+  -moz-transition: margin-top .45s ease-in-out;
+  transition: margin-top .45s ease-in-out;
+}
+button ul li {
+  display: block;
+  height: 55px;
+  padding: 1em;
 }
