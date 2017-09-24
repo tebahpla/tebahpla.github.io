@@ -12,7 +12,7 @@ background-image:none !important;
 }
 
 input {
-    width: 200px;
+    width: 300px;
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 4px;
@@ -21,16 +21,24 @@ input {
     padding: 12px 40px 12px 20px;
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
+    
+    padding-right: 50px;
+    background: url(https://tebahpla.github.io/searchbutton.png) no-repeat scroll 250px 7px;
+padding-left:30px;
 }
 input[type=search]:hover {
     width: 80%;
+    background: url(https://tebahpla.github.io/searchbutton.png) no-repeat scroll 95% 7px;
+    padding-left:30px;
 }
 input[type=search]:focus {
-    width: 60%;
+    width: 38%;
+    background: url(https://tebahpla.github.io/searchbutton.png) no-repeat scroll 95% 7px;
 }
 input[type=search]:active {
     width: 99%;
 }
+
 input[type="submit"] {
     border-radius: 2px;
     background: #f2f2f2;
