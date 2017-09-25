@@ -211,9 +211,20 @@ button ul li {
   height: 55px;
   padding: 1em;
 }
+ol {
+  margin-top: 0;
+  padding: 0;
+  list-style: none;
+  -webkit-transition: margin-top .45s ease-in-out;
+  -moz-transition: margin-top .45s ease-in-out;
+  transition: margin-top .45s ease-in-out;
+  display: block;
+  height: 55px;
+  padding: 1em;
+}
 </style>
 
-<div align='center'><table><td><button onclick='alert("YOURE ALREADY ON OOGLE SEARCH, YOU IDIOT!!!")'> <ul><li> Oogle Search</li></ul>  </button></td>
+<div align='center'><table><td><button onclick='document.getElementById("myForm").submit()'>  <ol><li>   Oogle Search</li></ol>  </button></td>
 <td><button>
   <ul>
     <li onclick='window.location="https://tebahpla.github.io/oogle?q=I%27m+Feeling+Yucky"'>I'm Feeling Yucky</li>
