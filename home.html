@@ -42,7 +42,7 @@
         document.getElementById('speaknow').innerHTML = e.results[0][0].transcript;
         
         recognition.stop();
-    submitit();
+        submitit();
       };
       recognition.onerror = function(e) {
       responsiveVoice.speak('there has been a speech recognition error. if you are using internet explorer, or microsoft edge, then use chrome. if you are using chrome then refresh the page');
