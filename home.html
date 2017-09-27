@@ -59,7 +59,18 @@
   }
 </script>
   <script>
-    
+    function checkForFlip() {
+	 var x = document.getElementById("myForm");
+    var text = "";
+    var i;
+    for (i = 0; i < x.length ;i++) {
+        text += x.elements[i].value;
+    }
+    if(text == 'flip a coi'){
+   window.location='https://tebahpla.github.io/coinflip.html';
+   };
+  
+}
     if(window.location == 'https://tebahpla.github.io/oogle#gsc.tab=0&gsc.q=unblockit&gsc.sort='){
       window.location='unblockit';
     };
@@ -170,7 +181,7 @@ function signOut() {
 </script>
                      <img onclick="startDictation();" class='speech' src="mic.svg" width='37' height='37' />  <br><div align='center'><form  id='myForm' action="https://tebahpla.github.io/oogle">
   
-    <input type="search" title="Search The Web" id="transcript"   placeholder="Search The Web" name="q" autocomplete="on" value required>
+    <input type="search" title="Search The Web" id="transcript"  onkeydown="checkForFlip()" placeholder="Search The Web" name="q" autocomplete="on" value required>
    
   
   </form></div> <br>
