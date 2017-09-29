@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 .gsc-clear-button{
  display:none !important;
 }
@@ -61,45 +64,45 @@ input[type="submit"]:hover {
 body {
         }
   #mySidenav a {
-    position: fixed;
-    right: -188px;
-    transition: 0.5s;
-    padding: 20px;
-    width: 170px;
-    text-decoration: none;
-    font-size: 20px;
+    position: fixed !important;
+    right: -188px !important;
+    transition: 0.5s !important;
+    padding: 20px !important;
+    width: 170px !important;
+    text-decoration: none !important;
+    font-size: 20px !important;
     color: white !important;
-    border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px !important;
 }
 /* sidebar */
 #mySidenav a:hover {
-    right: 0;
+    right: 0 !important;
  color: white !important;
 }
 #hideMe{
-  transition: opacity 0.3s;
+  transition: opacity 0.3s !important;
  
   
 }
 #about {
-    top: 240px;
-    background-color: purple;
+    top: 240px !important;
+    background-color: purple !important;
  color: white !important;
 }
 #setr {
-    top: 300px;
-    background-color: #2196F3;
-    cursor:pointer;
+    top: 300px !important;
+    background-color: #2196F3 !important;
+    cursor:pointer !important;
  color: white !important;
   }
 #projects {
-    top: 360px;
-    background-color: #f44336;
+    top: 360px !important;
+    background-color: #f44336 !important;
     color: white !important;
 }
 #contact {
-    top: 200px;
-    background-color: #555
+    top: 200px !important;
+    background-color: #555 !important;
      color: white !important;
 }/* sidebar over */
 iframe{
