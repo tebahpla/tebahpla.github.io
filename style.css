@@ -1,6 +1,10 @@
 button, ul, ol, li {
   box-sizing: border-box;
 }
+input::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
 .gsc-clear-button{
  display:none !important;
 }
