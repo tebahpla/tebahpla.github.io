@@ -12,6 +12,20 @@
  
   #speaknow { text-align: center; cursor: progress;}
 </style>
+	<datalist id="autocomplete">
+  <option value="HTML">
+  <option value="CSS">
+  <option value="JavaScript">
+  <option value="Java">
+  <option value="Ruby">
+  <option value="PHP">
+  <option value="Go">
+  <option value="Erlang">
+  <option value="Python">
+  <option value="C">
+  <option value="C#">
+  <option value="C++">
+</datalist>
 <meta name="google-signin-client_id" content="273615037515-ebr6473ifcvjvs306tt9hq4ekt1d0q9l.apps.googleusercontent.com"><script>
   (function() {
     var cx = '006871109958894476408:m3adoijc7za';
@@ -202,7 +216,7 @@ function signOut() {
 </script>
                      <img onclick="startDictation();" class='speech' src="mic.svg" width='37' height='37' />  <br><div align='center'><form  id='myForm' action="https://tebahpla.github.io/oogle">
   
-    <input type="search" title="Search The Web" id="transcript"  onkeydown="checkForFlip()" placeholder="Search The Web" name="q" autocomplete="on" value required>
+    <input type="search" title="Search The Web" id="transcript" list='autocomplete' onkeydown="checkForFlip()" placeholder="Search The Web" name="q" autocomplete="on" value required>
    
   
   </form></div> <br>
