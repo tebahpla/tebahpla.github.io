@@ -227,7 +227,7 @@ function signOut() {
 </script>
                      <img onclick="startDictation();" class='speech' src="mic.svg" width='37' height='37' />  <br><div align='center'><form  id='myForm' action="https://tebahpla.github.io/oogle">
   
-    <input type="search" title="Search The Web" id="transcript" list='autocomplete' onkeydown="checkForFlip()" placeholder="Search The Web" name="q" autocomplete="on" value required>
+    <input type="search" title="Search The Web" id="transcript" list='autocomplete' onkeydown="checkForFlip()" oninput="setTimeout(function(){ checkForFlip() }, 1000)"  placeholder="Search The Web" name="q" autocomplete="on" value required>
    
   
   </form></div> <br>
