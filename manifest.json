@@ -1,6 +1,6 @@
 {
   "short_name": "Oogle",
-  "name": "Oogle Search",
+  "name": "Oogle",
   "icons": [
     {
       "src": "launcher-icon-1x.png",
@@ -18,5 +18,5 @@
       "sizes": "192x192"
     }
   ],
-  "start_url": "home.html"
+  "start_url": "home"
 }
