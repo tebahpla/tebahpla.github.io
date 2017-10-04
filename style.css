@@ -168,8 +168,11 @@ a{
     text-decoration: none;
     color: blue;
     cursor: pointer;
- 
+ transition: 0.5s !important;
 }
+ a:hover{
+     color: red;
+        }
 button{
  cursor: pointer;
 }
