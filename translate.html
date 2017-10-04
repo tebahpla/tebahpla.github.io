@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <link rel="shortcut icon" href="https://raw.githubusercontent.com/tebahpla/tebahpla.github.io/master/C--fakepath-Oogle-translate-favicon.ico">
 <!doctype html><html itemscope="" itemtype="http://schema.org/WebPage" lang="en-CA"><head><section><a href="translate.html"><meta content="https://github.com/tebahpla/tebahpla.github.io/blob/master/oogletranslate.png?raw=true" itemprop="image">
 <img src="https://github.com/tebahpla/tebahpla.github.io/blob/master/oogletranslate.png?raw=true" class="floatin_oogle">
@@ -45,8 +47,14 @@ function setGreet(){
 }
 }
 function translater(){
-var txt= prompt("Text to translate:");
-document.getElementById('translator').innerHTML=txt;
+
+var x = document.getElementById("myForm");
+    var text = "";
+    var i;
+    for (i = 0; i < x.length ;i++) {
+        text += x.elements[i].value;
+    }
+document.getElementById('translator').innerHTML=text;
 
 }
  function copyToClipboard(element) {
@@ -59,8 +67,9 @@ document.getElementById('translator').innerHTML=txt;
 
 
 </script>
-<p id="translator" onclick="copyToClipboard('#translator')" title="Click to copy the text"></p>   
-<input type="submit" value="Enter Text To Translate" translate="no" onclick="translater()"><br>
+
+   <form id='myForm'>
+<textarea oninput="translater()"></textarea></form><p id="translator" onclick="copyToClipboard('#translator')" title="Click to copy the text"></p><br>
 <div id='MicrosoftTranslatorWidget' class='Dark' style='color:white;background-color:#555555'></div><script type='text/javascript'>setTimeout(function(){{var s=document.createElement('script');s.type='text/javascript';s.charset='UTF-8';s.src=((location && location.href && location.href.indexOf('https') == 0)?'https://ssl.microsofttranslator.com':'http://www.microsofttranslator.com')+'/ajax/v3/WidgetV3.ashx?siteData=ueOIGRSKkd965FeEGM5JtQ**&ctf=False&ui=true&settings=Manual&from=';var p=document.getElementsByTagName('head')[0]||document.documentElement;p.insertBefore(s,p.firstChild); }},0);</script>
                        
 
@@ -73,5 +82,5 @@ document.getElementById('translator').innerHTML=txt;
   <a class='deployLink' href="#add" id="about" target='blank' translate="no">  Add Oogle to   Chrome</a>
   <a id="setr" onclick="setGreet()" translate="no">Set Name</a>
 </div>
-<link href="style.css" rel="stylesheet"><body onload="checkCookie()"><!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58f14f9d42d58017"></script> </body>
+<link href="https://tebahpla.github.io/style.css" rel="stylesheet"><body onload="checkCookie()"><!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58f14f9d42d58017"></script> </body>
 
