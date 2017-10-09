@@ -37,7 +37,7 @@ input[type=search]:hover {
     width: 80%;
     background: url(https://tebahpla.github.io/searchbutton.png) no-repeat scroll 95% 7px;
     padding-left:30px;
-	border: 2px solid red;
+	border: 2px solid #30a300;
 }
 input[type=search]:focus {
     width: 38%;
