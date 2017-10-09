@@ -10,9 +10,9 @@ input::-webkit-calendar-picker-indicator {
 }
 .askew {
   position:relative;
-  top:100px;
-  -webkit-transform:rotate(-3deg);
-  transform:rotate(-3deg);
+  top:50px;
+  -webkit-transform:rotate(-2deg);
+  transform:rotate(-2deg);
 }
 .cse input.gsc-input,input.gsc-input{
 background-image:none !important;
