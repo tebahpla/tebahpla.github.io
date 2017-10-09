@@ -11,8 +11,8 @@ input::-webkit-calendar-picker-indicator {
 .askew {
   position:relative;
   top:50px;
-  -webkit-transform:rotate(-2deg);
-  transform:rotate(-2deg);
+  -webkit-transform:rotate(-1deg);
+  transform:rotate(-1deg);
 }
 .cse input.gsc-input,input.gsc-input{
 background-image:none !important;
