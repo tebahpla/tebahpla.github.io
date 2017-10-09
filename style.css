@@ -37,13 +37,16 @@ input[type=search]:hover {
     width: 80%;
     background: url(https://tebahpla.github.io/searchbutton.png) no-repeat scroll 95% 7px;
     padding-left:30px;
+	border: 2px solid red;
 }
 input[type=search]:focus {
     width: 38%;
     background: url(https://tebahpla.github.io/searchbutton.png) no-repeat scroll 95% 7px;
+	border: 2px solid blue;
 }
 input[type=search]:active {
     width: 99%;
+	border: 2px solid yellow;
 }
 
 input[type="submit"] {
