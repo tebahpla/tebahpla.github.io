@@ -165,8 +165,8 @@ iframe{
   
 }
 a{
-    text-decoration: none;
-    color: blue !important;
+    text-decoration: none !important;
+    color: blue;
     cursor: pointer !important;
  transition: 0.5s !important;
 }
