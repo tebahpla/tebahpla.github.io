@@ -181,6 +181,8 @@ a{
 }
  a:hover{
      color: red !important;
+	  -webkit-transform:rotate(-0.5deg) !important;
+  transform:rotate(-0.5deg) !important;
         }
 button{
  cursor: pointer;
