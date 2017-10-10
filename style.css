@@ -179,6 +179,7 @@ a{
     color: blue;
     cursor: pointer !important;
  transition: 0.5s !important;
+	position: relative;
 }
  a:hover{
      color: red !important;
