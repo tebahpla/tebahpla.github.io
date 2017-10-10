@@ -91,6 +91,7 @@ body {
 #mySidenav a:hover {
     right: 0 !important;
  color: white !important;
+	postion:relative;
 }
 #hideMe{
   transition: opacity 0.3s !important;
