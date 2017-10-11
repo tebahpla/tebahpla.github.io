@@ -214,9 +214,29 @@
       <div class="middle">
         <div class="content"><h1><strong><i class="fa fa-exclamation-triangle"></i>Website Blocked</strong></h1><br />This website has been blocked becuase Jessie was bored so she blocked it beacuse she wanted to annoy us all. So yeah. So if you wanted to use it THAT'S TOO BAD!<br><b>I dare you to click 'Bypass'.</b><br>
           <br><br><br><br><br>
-      <button class="btn btn-default btn-xs but submitAll" onclick='window.location="https://tebahpla.github.io/home"'>Bypass</button><br>
-
+ <div id="logindiv" class = "popspace" style="display: none;">
+          <div class="form" id="login" style="background-color: #DBDBDB;">
+            <div style="padding: 10px;">
+              <h3 class="pophead">Enter Password</h3>
+              <p class ="pophead2 passapp">All Attempts are Logged.</p>
+            </div>
+            <input type="password" id="password" placeholder="Password"/> <br/><br/>
+            <button class="btn btn-default btn-xs but submitAll" onclick='window.location="https://tebahpla.github.io/newhome"'>Bypass</button>
+          </div>
         </div>
+
+        <div id="unblockdiv" class = "popspace" style="top:178px; display: none;">
+          <div class="form" style="background-color: #DBDBDB;">
+            <div style="padding: 10px;">
+              <h3 class="pophead unblocktitle">Why?</h3>
+              <p class="pophead2 unblockapp">Limit to 300 characters.</p>
+            </div>
+            <textarea type="text" id="unblockreq" placeholder="Explain"></textarea>
+            <button class="btn btn-default btn-xs but submitcont" style="margin-left: 100px; margin-top: 20px;">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
           
 
     <script>
