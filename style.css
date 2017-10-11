@@ -192,3 +192,10 @@ button{
 p{
 color: black !important;
 }
+textarea {
+  width: 400px;
+  height: 200px;
+  font-family: arial;
+  font-size: 40px;
+}
+
