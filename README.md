@@ -4,6 +4,6 @@ if( n == true){
 window.location="stuff/blocked";
 }
 else{
-window.location="home";
+window.location="newerhome";
 };
 </script>
