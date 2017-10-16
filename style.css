@@ -4,6 +4,13 @@ button, ul, ol, li {
 input::-webkit-calendar-picker-indicator {
   display: none;
 }
+img:hover{
+-webkit-transform:rotate(-2000deg) !important;
+  transform:rotate(-2000deg) !important;
+}
+img{
+ transition: 10s !important;
+}
 
 .gsc-clear-button{
  display:none !important;
