@@ -11,6 +11,13 @@ img:hover{
 img{
  transition: 10s !important;
 }
+#speaknow:hover{
+-webkit-transform:rotate(-2000deg) !important;
+  transform:rotate(-2000deg) !important;
+}
+#speaknow{
+ transition: 10s !important;
+}
 
 .gsc-clear-button{
  display:none !important;
