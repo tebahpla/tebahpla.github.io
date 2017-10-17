@@ -1,6 +1,49 @@
 
-Run »Result Size: 606 x 549
-
+<link rel="shortcut icon" href="https://raw.githubusercontent.com/tebahpla/tebahpla.github.io/master/ooglemapsfav.png">
+<!doctype html><html itemscope="" itemtype="http://schema.org/WebPage" lang="en-CA"><head><section><a href="maps"><meta content="https://raw.githubusercontent.com/tebahpla/tebahpla.github.io/master/ooglemaps.png?raw=true" itemprop="image">
+<img src="https://raw.githubusercontent.com/tebahpla/tebahpla.github.io/master/ooglemaps.png?raw=true" class="floatin_oogle"><br><style>
+       #map {
+        height: 550px;
+        width: 100%;
+       }
+    </style>
+  </a><np id="greeting" translate="no"></np></section><br>
+  <script>
+function setCookie(cname,cvalue,exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires=" + d.toGMTString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+var user = "Example Name";
+function checkCookie() {
+    user=getCookie("username");
+    if (user != "") {
+        document.getElementById("greeting").innerHTML="Here's a map, " + user+"!";
+        document.getElementById("setr").innerHTML="Change Name";
+    } else {
+      user = "Example Name"
+    }
+}
+function setGreet(){
+ user = prompt("What would you like Oogle to call you?",user);
+       if (user != "" && user != null) {
+           setCookie("username", user, 300);
            document.getElementById("greeting").innerHTML="Welcome, " + user+".";
            document.getElementById("setr").innerHTML="Change Name";
            
@@ -15,7 +58,7 @@ document.getElementById('translator').innerHTML=txt;
 <div id="map"></div>
     <script>
     
-​
+
       function initMap() {
        var uluru = {lat: 47.6811, lng: -122.3365};
     if ("geolocation" in navigator) {
@@ -28,14 +71,14 @@ document.getElementById('translator').innerHTML=txt;
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 15,
           center: uluru,
-      fullscreenControl: true
+	  fullscreenControl: true
         });
  var emoji = 'https://tebahpla.github.io/poop.png';
         var marker = new google.maps.Marker({
           position: uluru,
           map: map,
-      animation: google.maps.Animation.DROP,
-      icon: emoji
+	  animation: google.maps.Animation.DROP,
+	  icon: emoji
         });
       }
     </script>
@@ -44,9 +87,14 @@ document.getElementById('translator').innerHTML=txt;
     </script>
 <br><div id="openweathermap-widget-24"></div>
 <script>window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];  window.myWidgetParam.push({id: 24,cityid: '5809844',appid: '02cf83653a9ad251fc9dbb94c7e63183',units: 'imperial',containerid: 'openweathermap-widget-24',  });  (function() {var script = document.createElement('script');script.async = true;script.charset = "utf-8";script.src = "http://openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator-2.0.js";var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  })();</script><br>
-​
+
   <br><br><br><nobr><p nowrap> <br><a href="translate">Translate</a> | <a href="https://tebahpla.github.io/drive">Drive</a> | <a href='https://vincens2005.github.io/t-rex-runner/'>Dinosaur Game</a> | <a href="calc">Calculator</a> | <a href="maps">Maps</a> | <a href="roamos">Roam OS</a>  |  <a href="https://tebahpla.github.io/powerpoop/PowerPoop">PowerPoop</a> | <a href='https://tebahpla.github.io/beerie/beerie.html' title='Beerie hates you'>Beerie</a> | <a  onclick="flipoff('🖕🖕🖕🖕🖕')" >Support</a><jibber id='sss'></jibber><nobr> <div class="g-signin2" data-onsuccess="onSignIn" data-longtitle="true" id='logg' title='Ironically, you can sign in with Google.' nowrap></div></p></nobr><br><br><br><br><br><br><br><br>
   
   
   
-
+  <section id="add" translate="no"><iframe src="https://docs.google.com/document/d/1tMcUEiUVSwaTo51Fa3otCdPMgKWPMxufmwhvaDs41Vk/pub?embedded=true" width="1000" height="1000" frameborder="0"></iframe></section>
+<title translate="no">Oogle Maps</title><div id="mySidenav" class="sidenav">
+  <a class='deployLink' href="#add" id="about" target='blank' translate="no">  Add Oogle to   Chrome</a>
+  <a id="setr" onclick="setGreet()" translate="no">Set Name</a>
+</div>
+<link href="https://tebahpla.github.io/style.css" rel="stylesheet"><body onload="checkCookie()"><!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58f14f9d42d58017"></script> </body>
