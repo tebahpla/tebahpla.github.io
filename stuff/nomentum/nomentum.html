@@ -1,0 +1,1079 @@
+
+
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  
+  <title>Nomentum</title>
+  
+  
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+
+      <style>
+      html {
+  line-height: 1.15;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+
+  /* 2 */ }
+#weather ul {
+  margin: 0;
+  padding: 0;
+}
+
+.icon-0:before { content: ":"; font-family:'weather'; }
+.icon-1:before { content: "p"; font-family:'weather';}
+.icon-2:before { content: "S"; font-family:'weather';}
+.icon-3:before { content: "Q"; font-family:'weather';}
+.icon-4:before { content: "S"; font-family:'weather';}
+.icon-5:before { content: "W"; font-family:'weather';}
+.icon-6:before { content: "W"; font-family:'weather';}
+.icon-7:before { content: "W"; font-family:'weather';}
+.icon-8:before { content: "W"; font-family:'weather';}
+.icon-9:before { content: "I"; font-family:'weather';}
+.icon-10:before { content: "W"; font-family:'weather';}
+.icon-11:before { content: "I"; font-family:'weather';}
+.icon-12:before { content: "I"; font-family:'weather';}
+.icon-13:before { content: "I";font-family:'weather'; }
+.icon-14:before { content: "I"; font-family:'weather';}
+.icon-15:before { content: "W"; font-family:'weather';}
+.icon-16:before { content: "I"; font-family:'weather';}
+.icon-17:before { content: "W"; font-family:'weather';}
+.icon-18:before { content: "U"; font-family:'weather';}
+.icon-19:before { content: "Z"; font-family:'weather';}
+.icon-20:before { content: "Z"; font-family:'weather';}
+.icon-21:before { content: "Z"; font-family:'weather';}
+.icon-22:before { content: "Z"; font-family:'weather';}
+.icon-23:before { content: "Z"; font-family:'weather';}
+.icon-24:before { content: "E"; font-family:'weather';}
+.icon-25:before { content: "E"; font-family:'weather';}
+.icon-26:before { content: "3"; font-family:'weather';}
+.icon-27:before { content: "a"; font-family:'weather';}
+.icon-28:before { content: "A"; font-family:'weather';}
+.icon-29:before { content: "a"; font-family:'weather';}
+.icon-30:before { content: "A";font-family:'weather'; }
+.icon-31:before { content: "6";font-family:'weather'; }
+.icon-32:before { content: "1";font-family:'weather'; }
+.icon-33:before { content: "6"; font-family:'weather';}
+.icon-34:before { content: "1"; font-family:'weather';}
+.icon-35:before { content: "W"; font-family:'weather';}
+.icon-36:before { content: "1"; font-family:'weather';}
+.icon-37:before { content: "S"; font-family:'weather';}
+.icon-38:before { content: "S"; font-family:'weather';}
+.icon-39:before { content: "S"; font-family:'weather';}
+.icon-40:before { content: "M"; font-family:'weather';}
+.icon-41:before { content: "W"; font-family:'weather';}
+.icon-42:before { content: "I"; font-family:'weather';}
+.icon-43:before { content: "W"; font-family:'weather';}
+.icon-44:before { content: "a"; font-family:'weather';}
+.icon-45:before { content: "S"; font-family:'weather';}
+.icon-46:before { content: "U"; font-family:'weather';}
+.icon-47:before { content: "S"; font-family:'weather';}
+
+#weather li {
+
+  
+  padding: 20px;
+  display: block;
+  border-radius: 5px;
+}
+@font-face {
+    font-family: 'weather';
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.eot');
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.eot?#iefix') format('embedded-opentype'),
+         url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.woff') format('woff'),
+         url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.ttf') format('truetype'),
+         url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.svg#artill_clean_weather_iconsRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+body {
+  margin: 0; 
+background-image: url("https://raw.githubusercontent.com/tebahpla/tebahpla.github.io/master/stuff/nomentum/images/nomentum.png");}
+
+/**
+ * Add the correct display in IE 9-.
+ */
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block; }
+#whatthefocusis{
+   
+  font-family: arial;
+  font-size: 40px;
+  text-align: center;
+}
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+figcaption,
+figure,
+main {
+  /* 1 */
+  display: block; }
+
+/**
+ * Add the correct margin in IE 8.
+ */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */ }
+
+/**
+ * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+b,
+strong {
+  font-weight: inherit; }
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+mark {
+  background-color: #ff0;
+  color: #000; }
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+audio,
+video {
+  display: inline-block; }
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+img {
+  border-style: none; }
+
+/**
+ * Hide the overflow in IE.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */ }
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em; }
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+[type="checkbox"],
+[type="radio"] {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+details,
+menu {
+  display: block; }
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item; }
+
+/* Scripting
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+canvas {
+  display: inline-block; }
+
+/**
+ * Add the correct display in IE.
+ */
+template {
+  display: none; }
+
+/* Hidden
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10-.
+ */
+[hidden] {
+  display: none; }
+
+body {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: none;
+  min-height: 100vh;
+  color: #fff;
+  /*right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;*/ }
+
+#center {
+  display: block;
+  top: 50%;
+  width: 100%;
+  text-align: center; }
+  #center h1#time {
+    font-size: 1500%;
+    }
+  #center .format {
+    position: absolute;
+    left: 102%;
+    bottom: 9%;
+    font-size: 150%;
+    opacity: 0; }
+  #center h2 {
+    font-size: 300%;
+    
+    line-height: 1; }
+
+#center-below {
+  display: block;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  text-align: center; }
+  #center-below h3 {
+    font-size: 187.5%;
+    }
+  input {
+    width: 450px;
+    border-bottom-width: 2px;
+    display: block;
+    background: 0;
+    border: 0;
+    border-bottom: 3px solid #fff;
+    color: #fff;
+    font-weight: 500;
+    outline: 0;
+    margin: 0 auto; 
+}
+input#search{
+  color:white !important;
+  border-bottom: none !important;
+  
+    background: url('https://tebahpla.github.io/stuff/nomentum/images/musica-searcher.svg') no-repeat scroll 7px 0px;
+padding-right:30px;
+   padding-left: 35px;
+  background-size: 20px auto;
+  font-weight: bold !important;
+  transition: 0.826s
+}
+input#search:focus{
+  color:#ffffff !important;
+   border-bottom: 3px solid #fff !important;
+  paddin-left: 30px;
+}
+
+#todo {
+  float: right;
+  right: 0; 
+cursor:pointer;
+}
+
+.dropdown-menu {
+  background-color: #384047; }
+  .dropdown-menu li a {
+    color: #7b8b8e; }
+
+.quote {
+  border-left: 0;
+  margin-top: 30px; }
+  .quote #quotation::before {
+    font-family: FontAwesome;
+    content: "\f10d"; }
+
+.tweet a, .tweet a:active, .tweet a:hover, .tweet a:visited {
+  color: #fff;
+  text-decoration: none; }
+
+.tweet a:active, .tweet a:hover {
+  color: #7b8b8e; }
+
+.cornerPadTop {
+  padding-top: 20px; }
+
+.v-adjust {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row; }
+  .v-adjust [class^="col-"], .v-adjust [class*="col-"] {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .v-adjust .col-md-8 {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+  .v-adjust #bottom-right {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end; }
+
+#bottom-left {
+  margin-top: 10px; }
+*{
+color: white;
+  font-weight:normal;
+}
+
+    </style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+</head>
+
+<body translate="no" >
+
+  
+<html lang="en">
+<script src="https://quotesondesign.com/api/3.0/api-3.0.js" type="text/javascript" charset="utf-8"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Nomentum</title>
+<script>function setGreet(){
+ user = prompt("What would you like Nomentum to call you?",user);
+       if (user != "" && user != null) {
+           setCookie("username", user, 3000);
+           document.getElementById("name").innerHTML=user+".";
+           
+       
+}
+}
+  </script>
+    <meta name="description" content="Chingu Voyage Build-to-learn project build Nomentum dash. Chrome extension use Bootstrap, HTML5,CSS, CSS3, JavaScript, API and JSON.">
+    <meta name="keywords" content="HTML5,CSS, CSS3, JavaScript, API, JSON, Bootstrap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand|Roboto" rel="stylesheet">
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/styles/main.css" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]>
+      <script src = "http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body onload='checkCookie()'>
+
+
+<main>
+
+  <!--=================== Top ===================-->
+  
+    <section id="top">
+      
+    <!--========== List & Weather =========-->
+      
+      <div class="container-fluid">
+          <div class="row cornerPadTop">
+
+              <!--========== List =========-->
+              <div class="col-md-10">
+                  <span class="dropdown-toggle"  aria-haspopup="true"
+                  aria-expanded="false">
+                    <form action='https://tebahpla.github.io/newoogle'><input type='text' id='search' name='q'></form></span>
+                  <ul class="dropdown-menu">
+                      <li class="dropdown-header">Header</li>
+                      <li><a href="#">1</a></li>
+                      <li><a href="#">2</a></li>
+                      <li><a href="#">3</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#">Other</a></li>
+                  </ul>
+              </div><!-- .col-md-10 -->
+
+              <!--========== Weather =========-->
+              <div class="col-md-2 text-right" id="weather">weather</div>
+
+          </div><!--.row-->
+      </div><!--.container-->
+  </section><!-- #top -->
+
+  <!--=================== Center ===================-->
+
+  <section id="main-box">
+     <div class="container">
+       <div class="row">
+         <div id="center">
+          <div class="col-md-6 col-md-offset-3 text-center">
+
+            <!--========== Clock =========-->
+
+               <div class="center-clock">
+                 <div class="clock">
+                   <h1 id="time">
+                     Loading
+                   </h1>
+                   <span class="format">
+                     LOADING
+                   </span>
+                 </div><!-- .clock -->
+               </div><!-- .center-clock -->
+
+                <!--========== Greeting =========-->
+
+                <div id="greeting">
+                  <h2>
+                    Good
+                      <span class="period" id='period'>
+                      morning
+                      </span>,
+                      <span class="name" id='name'  ondblclick='setGreet()'>
+                      SET YOUR USERNAME!!
+                      </span>
+                  </h2>
+                </div><!-- #greeting -->
+
+          </div><!-- #center -->
+
+
+           <!--========== Center Below =========-->
+
+           <div id="center-below">
+              <div id="focuses" class="col-md-6 col-md-offset-3 text-center">
+
+                <!--========== Focuse Text =========-->
+
+                 <div class="focuses-text">
+                    <h3 id='whatsyourfocus'>
+                      What is your main focus for today?
+                    </h3>
+                   <div align='center' id='focus'>
+                     <form onsubmit='createFocus()'>
+                    <input type="text" id='whatthefocusis'/>
+                     </form>
+                   </div>
+                 </div><!-- .focuses-text -->
+
+              </div><!-- #focuses -->
+            </div><!-- .col-md-6 .col-md-offset-3 -->
+          </div> <!-- #center-below -->
+         </div><!-- .row -->
+       </div><!-- .container -->
+     </section><!-- #main-box -->
+
+
+
+  <!--=================== Footer ===================-->
+
+  <section id="footer">
+    <div class="container-fluid">
+      <div class="row v-adjust">
+
+         <!--========== Bottom Left =========-->
+
+         <div id="bottom-left" class="col-md-2">
+            <div id="preferences">
+
+              <div class="dropup">
+                 <i class="fa fa-cog fa-2x dropdown-toggle" aria-hidden="true" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                 </i>
+
+                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                   <li>
+                   <li><a onclick='setGreet()'>Change your username</a></li>
+                   <li role="separator" class="divider"></li>
+                   <li><a href="https://tebahpla.github.io/">Oogle</a></li>
+                 </ul><!-- .dropdown-menu -->
+               </div><!-- .dropup -->
+
+            </div><!-- #preferences -->
+         </div><!-- #bottom-left -->
+
+         <!--========== Bottom Center =========-->
+          
+         <div id="bottom-center" class="col-md-8">
+            
+          <!--========== Quote =========-->
+
+              <blockquote class="quote text-center" id='qod-quote'>
+                <p id="quotation"></p>
+                <p id="author"></p>
+
+                
+              </blockquote>
+
+
+         </div> <!--#bottom-center -->
+          
+         <!--========== Bottom Right =========-->
+
+         <div id="bottom-right" class="col-md-2">
+            <div id="todo">
+              <div class="todo-container">
+
+                <div class="dropup">
+                   <span class="dropdown-toggle" aria-hidden="true" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Links
+                   </span>
+
+                   <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
+                     <li><a href="https://tebahpla.github.io/beerie/beerie">Beerie</a></li>
+                     <li><a href="https://www.wikipedia.org/">Wikipedia</a></li>
+                     <li><a href="https://tebahpla.github.io/powerpoop/PowerPoop.html">PowerPoop</a></li>
+                     <li role="separator" class="divider"></li>
+                     <li><a href="https://tebahpla.github.io/">Oogle</a></li>
+                   </ul><!-- .dropdown-menu -->
+                 </div><!-- .dropup -->
+
+              </div><!-- .todo-pane-container -->
+            </div><!-- #todo -->
+         </div><!-- #bottom-right -->
+
+      </div><!-- .row -->
+    </div><!-- .container -->
+  </section>
+
+</main>
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <script src="assets/javascript/main.js" type="text/javascript"></script>
+ <script src="assets/javascript/quote.js" type="text/javascript"></script>
+ <script src="assets/javascript/weather.js" type="text/javascript"></script>
+
+</body>
+    <script src="//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js"></script>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdn.rawgit.com/monkeecreate/jquery.simpleWeather/master/jquery.simpleWeather.min.js'></script>
+
+    <script >
+    /*var randomNumber = Math.floor(Math.random() * 36);
+*/
+// Docs at http://simpleweatherjs.com
+$(document).ready(function() {
+  $.simpleWeather({
+    location: 'Seattle, WA',
+    woeid: '',
+    unit: 'f',
+    success: function(weather) {
+      html = '<h2><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'</h2>';
+      html += '<ul><li>'+weather.city+','+weather.region+'</li>';
+      
+     
+  
+      $("#weather").html(html);
+    },
+    error: function(error) {
+      $("#weather").html('<p>'+error+'</p>');
+    }
+  });
+});
+document.body.style.backgroundImage = "url('https://source.unsplash.com/collection/1949/${getRandomNum()}')";
+
+
+function setCookie(cname,cvalue,exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires=" + d.toGMTString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i < ca.length; i++) {if (window.CP.shouldStopExecution(2)){break;}
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {if (window.CP.shouldStopExecution(1)){break;}
+            c = c.substring(1);
+        }
+window.CP.exitedLoop(1);
+
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+window.CP.exitedLoop(2);
+
+    return "";
+}
+var user;
+var focuscookie;
+function checkCookie() {
+    user=getCookie("username");
+    focuscookie= getCookie('focus');
+    if (user != "") {
+        document.getElementById('name').innerHTML=user+".";
+    } else {
+       user = prompt("What's your name?","Theo");
+       if (user != "" && user != null) {
+           setCookie("username", user, 3000);
+          document.getElementById('name').innerHTML=user+".";
+       }
+    }
+
+  if(focuscookie !="" && focuscookie != null && focuscookie != ' '){
+    document.getElementById('focus').innerHTML='<h2>'+focuscookie+'</h2>';
+    document.getElementById('whatsyourfocus').innerHTML='Today'
+  }
+        }
+  
+
+
+
+function createFocus(){
+ var focus= document.getElementById("whatthefocusis").value;
+  document.getElementById("focus").innerHTML="<h2>"+document.getElementById("whatthefocusis").value+"</h2>" 
+setCookie('focus', focus, 1)
+  
+}
+function start() {
+  // your code here
+ 
+  var d = new Date();
+      var d = new Date(); // for now
+      var  n = d.getHours(); // => 9
+      var   b   = d.getMinutes();
+b=b.toString();
+   var l = b.length;  
+  if(n == 13){
+    n = 1;
+     i= n+":"+b
+    document.getElementById('period').innerHTML='afternoon'
+  }
+  if(n == 14){
+    n = 2;
+     i= n+":"+b
+    document.getElementById('period').innerHTML='afternoon'
+  }
+  if(n == 15){
+    n = 3;
+     i= n+":"+b
+    document.getElementById('period').innerHTML='afternoon'
+  }
+  if(n == 16){
+    n = 4;
+     i= n+":"+b
+    document.getElementById('period').innerHTML='evening';
+  }
+  if(n == 17){
+    n = 5;
+     i= n+":"+b
+    document.getElementById('period').innerHTML='evening'
+  }
+  if(n == 18){
+    n = 6;
+     i= n+":"+b
+    document.getElementById('period').innerHTML='evening'
+  }
+  if(n == 19){
+    n = 7;
+     i= n+":"+b
+    document.getElementById('period').innerHTML='night'
+  }
+  if(n == 20){
+    n = 8;
+     i= n+":"+b
+    document.getElementById('period').innerHTML='night'
+  }
+  if(n == 21){
+    n = 9;
+     i= n+":"+b
+    document.getElementById('period').innerHTML='night'
+  }
+  if(n == 22){
+    n = 10;
+     i= n+":"+b
+    document.getElementById('period').innerHTML='night'
+  }
+  if(n == 23){
+    n = 11;
+     i= n+":"+b
+    document.getElementById('period').innerHTML='night'
+  }
+  if(n == 24){
+    n = 12;
+     i= n+":"+b
+    document.getElementById('period').innerHTML='midnight'
+  }
+if(l == 1){
+  i= n+":0"+b   ; 
+}
+else{
+  i= n+":"+b   ;
+} 
+  if(n == 13){
+    n = 1;
+     i= n+":"+b
+    document.getElementById('period').innerHTML='afternoon'
+  }
+  if(n == 14){
+    n = 2;
+     i= n+":"+b
+    document.getElementById('period').innerHTML='afternoon'
+  }
+  if(n == 15){
+    n = 3;
+     i= n+":"+b
+    document.getElementById('period').innerHTML='afternoon'
+  }
+  if(n == 16){
+    n = 4;
+     i= n+":"+b
+    document.getElementById('period').innerHTML='evening';
+  }
+  if(n == 17){
+    n = 5;
+     i= n+":"+b
+    document.getElementById('period').innerHTML='evening'
+  }
+  if(n == 18){
+    n = 6;
+     i= n+":"+b
+    document.getElementById('period').innerHTML='evening'
+  }
+  if(n == 19){
+    n = 7;
+     i= n+":"+b
+    document.getElementById('period').innerHTML='night'
+  }
+  if(n == 20){
+    n = 8;
+     i= n+":"+b
+    document.getElementById('period').innerHTML='night'
+  }
+  if(n == 21){
+    n = 9;
+     i= n+":"+b
+    document.getElementById('period').innerHTML='night'
+  }
+  if(n == 22){
+    n = 10;
+     i= n+":"+b
+    document.getElementById('period').innerHTML='night'
+  }
+  if(n == 23){
+    n = 11;
+     i= n+":"+b
+    document.getElementById('period').innerHTML='night'
+  }
+  if(n == 24){
+    n = 12;
+     i= n+":"+b
+    document.getElementById('period').innerHTML='midnight'
+  }
+document.getElementById('time').innerHTML=i;
+  
+  
+  setTimeout(start, 000);
+}
+
+// boot up the first call
+start();
+  //# sourceURL=pen.js
+  </script>
+
+  
+  
+
+</body>
+</html>
+ 
