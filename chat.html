@@ -342,8 +342,20 @@ document.getElementById('translator').innerHTML=text;
     (e.keyCode || e.charCode) === 13 && send()
   }, false);
  button.addEventListener('click', send, false);
+  
   function send() {
-    p.publish({
+    if(document.getElementById('avatar').innerHTML.includes('img')){
+      p.publish({
+      channel: channel,
+      message: {
+        avatar: null,
+        text: input.value
+      },
+      callback: function(){input.value = '';}
+    });
+    }
+    else{
+      p.publish({
       channel: channel,
       message: {
         avatar: avatar.className,
@@ -351,6 +363,7 @@ document.getElementById('translator').innerHTML=text;
       },
       callback: function(){input.value = '';}
     });
+    }
   }
 })();
       var output = document.querySelector('.output'),
