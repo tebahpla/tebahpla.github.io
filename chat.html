@@ -407,6 +407,12 @@ document.getElementById('translator').innerHTML=text;
   }
 
 })();
+      var output = document.querySelector('.output'),
+    input = document.querySelector('input'),
+    button = document.querySelector('button'),
+    avatar = document.querySelector('.avatar'),
+    presence = document.querySelector('.presence');
+
 function onSignIn(googleUser) {
   var profile = googleUser.getBasicProfile();
   console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
@@ -414,6 +420,7 @@ function onSignIn(googleUser) {
   console.log('Image URL: ' + profile.getImageUrl());
   console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
   document.getElementById('avatar').innerHTML = '<img src="'+profile.getImageUrl()+'" class="avavav" />'
+  avatar.className = 'avavav';
   
 user = profile.getName();
   if(getCookie("signed") == null || getCookie("signed") == "" || getCookie("signed") == ' '){
