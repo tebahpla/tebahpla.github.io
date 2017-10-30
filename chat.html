@@ -378,7 +378,12 @@ document.getElementById('translator').innerHTML=text;
   p.subscribe({
     channel: channel,
     callback: function(m) {
+      if(m.avatar.includes('http')){
+        output.innerHTML = '<p><i class="avavav" ><img src="'+m.avatar+'" width="70" class="avavav"></i><span>' + m.text + '</span></p>' + output.innerHTML;
+      }
+      else{
       output.innerHTML = '<p><i class="' + m.avatar + '"></i><span>' + m.text + '</span></p>' + output.innerHTML;
+      }
     
     },
     presence: function(m) {
@@ -396,6 +401,18 @@ document.getElementById('translator').innerHTML=text;
  button.addEventListener('click', send, false);
 
   function send() {
+    if(document.getElementById('avatar').innerHTML.includes('img')){
+      p.publish({
+      channel: channel,
+      message: {
+        avatar: document.getElementById('thecrazyprofileimage').src;,
+        text: input.value
+      },
+      callback: function(){input.value = '';}
+    });
+  }
+  }
+      else{
     p.publish({
       channel: channel,
       message: {
@@ -404,6 +421,7 @@ document.getElementById('translator').innerHTML=text;
       },
       callback: function(){input.value = '';}
     });
+      }
   }
 
 })();
@@ -421,7 +439,7 @@ function onSignIn(googleUser) {
   console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
   document.getElementById('sss').innerHTML=' | <a href="#" onclick="signOut();" >Sign out</a> ';
   document.getElementById('logg').style.display = 'none';
-  document.getElementById('avatar').innerHTML = '<img src="'+profile.getImageUrl()+'" class="avavav" width="80" />'
+  document.getElementById('avatar').innerHTML = '<img src="'+profile.getImageUrl()+'" class="avavav" width="80" id ="thecrazyprofileimage"/>'
   document.getElementById('avatar').className = 'avavav';
   document.getElementById('avatar').style.content = 'none';
 user = profile.getName();
