@@ -422,8 +422,8 @@ function onSignIn(googleUser) {
   document.getElementById('sss').innerHTML=' | <a href="#" onclick="signOut();" >Sign out</a> ';
   document.getElementById('logg').style.display = 'none';
   document.getElementById('avatar').innerHTML = '<img src="'+profile.getImageUrl()+'" class="avavav" />'
-  avatar.className = 'avavav';
-  avatar.style.content = 'none';
+  document.getElementById('avatar').className = 'avavav';
+  document.getElementById('avatar').style.content = 'none';
 user = profile.getName();
   if(getCookie("signed") == null || getCookie("signed") == "" || getCookie("signed") == ' '){
     user = profile.getName();
