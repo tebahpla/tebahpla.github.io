@@ -11,6 +11,7 @@ img:hover{
 h2{
 	font-family: arial;
   font-size: 40px;
+	font-weight: normal;
 }
 img{
  transition: 10s !important;
