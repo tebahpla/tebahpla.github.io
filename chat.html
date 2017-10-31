@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html >
 
@@ -195,7 +196,7 @@ button {
           vertical-align: middle !important;
        
         }
-         #main{
+        #main{
         background:white;
         }
     </style>
@@ -287,12 +288,13 @@ document.getElementById('translator').innerHTML=text;
       <div style="display:inline; white-space:nowrap;">
     <input type="text" placeholder="Type your message..."> 
     <button>Send</button>
-        <div>
+    
+        </div>
     </nobr>
   </div>
   
 
-  <p class="presence"></p>
+  <p class="presence" style="color:red;"></p>
   <div class="output"></div>
 </section>
 
@@ -330,8 +332,12 @@ document.getElementById('translator').innerHTML=text;
   p.subscribe({
     channel: channel,
     callback: function(m) {
-      output.innerHTML = '<p><i class="' + m.avatar + '"></i><span>' + m.text + '</span></p>' + output.innerHTML;
-    
+    if(m.avatar.includes('http')){
+    output.innerHTML = '<p><i class="avavav"><img src="'+m.avatar+'" class="avavav" width="40" /></i><span>' + m.text + '</span></p><br>' + output.innerHTML;
+    }
+    else{
+      output.innerHTML = '<p><i class="' + m.avatar + '"></i><span>' + m.text + '</span></p><br>' + output.innerHTML;
+    }
     },
     presence: function(m) {
       if (m.occupancy > 1) {
