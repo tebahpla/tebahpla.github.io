@@ -8,6 +8,10 @@ img:hover{
 -webkit-transform:rotate(-2000deg) !important;
   transform:rotate(-2000deg) !important;
 }
+h2{
+	font-family: arial;
+  font-size: 40px;
+}
 img{
  transition: 10s !important;
 }
