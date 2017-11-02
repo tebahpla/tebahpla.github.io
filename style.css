@@ -13,6 +13,9 @@ h2{
   font-size: 40px;
 	font-weight: normal;
 }
+.coolrandomfont{
+	font-family: 'TypefaceEOT', 'TypefaceTTF', 'TypefaceSVG';
+}
 img{
  transition: 10s !important;
 }
