@@ -1,7 +1,7 @@
 button, ul, ol, li {
   box-sizing: border-box;
 }
-img[src="https://ssl.microsofttranslator.com/static/25157698/img/bingmark.png"]{
+#BingTranslatorLinkImg, #FacebookImg, #ShareImg{
 display: none;
 }
 input::-webkit-calendar-picker-indicator {
