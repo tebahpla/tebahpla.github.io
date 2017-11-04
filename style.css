@@ -2,7 +2,8 @@ button, ul, ol, li {
   box-sizing: border-box;
 }
 #BingTranslatorLinkImg, #FacebookImg, #ShareImg{
-display: none;
+display: none !important;
+visibility: hidden !important;
 }
 input::-webkit-calendar-picker-indicator {
   display: none;
