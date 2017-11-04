@@ -1,7 +1,7 @@
 button, ul, ol, li {
   box-sizing: border-box;
 }
-#BingTranslatorLinkImg, #FacebookImg, #ShareImg, img[src="https://maps.gstatic.com/mapfiles/api-3/images/google4.png"]{
+#BingTranslatorLinkImg, #FacebookImg, #ShareImg, img[src="https://maps.gstatic.com/mapfiles/api-3/images/google4.png"], .gm-style-cc{
 display: none !important;
 visibility: hidden !important;
 }
