@@ -315,6 +315,18 @@ document.getElementById('translator').innerHTML=text;
 <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
 
     <script >
+      if (Notification.permission === "granted") {
+    // If it's okay let's create a notification
+  }
+      function spawnNotification(theBody,theIcon,theTitle) {
+  var options = {
+      body: theBody,
+      icon: theIcon
+  }
+  var n = new Notification(theTitle,options);
+  setTimeout(n.close.bind(n), 5000); 
+}
+
     (function() {
   var output = document.querySelector('.output'),
     input = document.querySelector('input'),
@@ -334,9 +346,11 @@ document.getElementById('translator').innerHTML=text;
     callback: function(m) {
     if(m.avatar.includes('http')){
     output.innerHTML = '<p><i class="avavav"><img src="'+m.avatar+'" class="avavav" width="40" /></i><span>' + m.text + '</span></p><br>' + output.innerHTML;
+      spawnNotification(m.text, m.avatar, "Oogle Chat Message");
     }
     else{
       output.innerHTML = '<p><i class="' + m.avatar + '"></i><span>' + m.text + '</span></p><br>' + output.innerHTML;
+       spawnNotification(m.text, "https://tebahpla.github.io/stuff/chat/ooglechaticon.png", "Oogle Chat Message");
     }
     },
     presence: function(m) {
