@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+q = "+=";
+
+request = new XMLHttpRequest;
+request.open('GET', 'http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag='+q, true);
+
+request.onload = function() {
+    if (request.status >= 200 && request.status < 400){
+        data = JSON.parse(request.responseText).data.image_url;
+        console.log(data);
+        document.getElementById("here_is_gif").innerHTML = '<center><img src = "'+data+'"  title="GIF via Giphy"></center>';
+    } else {
+        console.log('reached giphy, but API returned an error');
+     }
+};
+</script>
+<h1> Let's Search Some Gifs! </h1>
+<div class="info">
+    <p> Search below to the wonderful world of Gifs! </p>
+        <form class="gif-form">
+            <input type="text" id="form-value" class="search-input-rounded">
+            <button type="submit" class="search_button"> Search for GIFs </button>
+            <input type="reset" value="Reset">
+        </form>
+        <div class="rando_facts animated bounceIn">
+            <p id="here_is_gif"> </p>
+        </div>
+</div>
