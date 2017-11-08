@@ -1,0 +1,369 @@
+
+
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" type="image/x-icon" href="https://production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" />
+  <link rel="mask-icon" type="" href="https://production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" />
+  <title>CodePen - Giphy API Search</title>
+  <script src="https://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700' rel='stylesheet' type='text/css'>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  
+      <style>
+      html {
+  box-sizing: border-box;
+  outline: none;
+}
+html *, html *:before, html *:after {
+  box-sizing: inherit;
+}
+html *:focus, html *:before:focus, html *:after:focus {
+  outline: inherit;
+}
+
+.title {
+  text-align: center;
+  font-weight: 200;
+  margin-top: 50px;
+}
+
+.input-wrapper {
+  position: relative;
+  width: 90%;
+  max-width: 500px;
+  margin: 50px auto 0;
+  -webkit-transition: 300ms ease;
+  transition: 300ms ease;
+}
+.input-wrapper .query {
+  height: 50px;
+  width: 100%;
+  display: block;
+  padding: 0 25px;
+  border: 1px solid #ccc;
+  -webkit-transition: 300ms ease;
+  transition: 300ms ease;
+}
+.input-wrapper .query:focus {
+  outline: none;
+  border: 1px solid #2196F3;
+  -webkit-transition: 300ms ease;
+  transition: 300ms ease;
+}
+.input-wrapper .loader {
+  height: 5px;
+  margin: 0;
+  padding: 0;
+  background: white;
+  margin: 0 auto;
+  position: relative;
+}
+.input-wrapper .loader:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #2196F3;
+  width: 0%;
+  height: 5px;
+  -webkit-transition: 300ms ease;
+  transition: 300ms ease;
+}
+.input-wrapper .loader.done:before {
+  width: 100%;
+}
+.input-wrapper .clear {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 50px;
+  width: 30px;
+  opacity: 1;
+}
+.input-wrapper .clear:before {
+  content: '\00d7';
+  color: #2196F3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  line-height: 50px;
+  -webkit-transition: 300ms ease;
+  transition: 300ms ease;
+}
+.input-wrapper .clear:hover:before {
+  cursor: pointer;
+}
+.input-wrapper.active {
+  margin-top: -55px;
+}
+.input-wrapper.active .query {
+  height: 30px;
+  margin-top: 0px;
+  -webkit-transition: 300ms ease;
+  transition: 300ms ease;
+}
+.input-wrapper.active .clear {
+  height: 30px;
+}
+.input-wrapper.active .clear:before {
+  line-height: 30px;
+}
+.input-wrapper.empty .clear {
+  opacity: 0;
+}
+
+.result {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 5% 25px 0;
+  /* background: #eee; */
+}
+.result img, .result p.no-results {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  opacity: 1;
+  -webkit-transition: 300ms ease;
+  transition: 300ms ease;
+}
+.result img.hidden, .result p.no-results.hidden {
+  opacity: 0;
+  -webkit-transition: 300ms ease;
+  transition: 300ms ease;
+}
+.result p.no-result {
+  font-weight: 200;
+}
+.result p.no-result.center {
+  text-align: center;
+}
+
+.random, .copy {
+  width: 90%;
+  max-width: 500px;
+  margin: 50px auto;
+  height: 50px;
+  display: block;
+  background: #2196F3;
+  color: white;
+  border: none;
+  opacity: 0;
+  -webkit-transition: 300ms ease;
+  transition: 300ms ease;
+}
+.random:hover, .copy:hover {
+  background: #0c7cd5;
+}
+.random.active, .copy.active {
+  opacity: 1;
+}
+
+    </style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+</head>
+
+<body translate="no" >
+
+  <h1 class="title">Random GIF Search</h1>
+
+<div class="input-wrapper empty">
+    <input type="text" class="query" />
+    <div class="loader"></div>
+    <div class="clear"></div>
+</div>
+
+<div class="result">
+  <p class="no-result center copyable" id="gif">
+   
+    <br /> <br />
+    Type in the box and hit enter for a cool random gif related to what you searched
+    <br /> <br />
+    Credit to Blake Tarter for almost all the code
+  </p>
+</div>
+<p align='center'>To Copy the image, right-click it and hit copy.<br> You can paste it into <a href='https://tebahpla.github.io/chat'>Oogle Chat</a> and it will look like gibberish, <br> but when you hit enter it will look like the GIF</p>
+<button class="random">Get Another GIF</button><br>
+    <script src="//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js"></script>
+
+  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+    <script >
+    "use strict";
+
+//Cross-browser function to select content
+function SelectText(element) {
+  var doc = document;
+  if (doc.body.createTextRange) {
+    var range = document.body.createTextRange();
+    range.moveToElementText(element);
+    range.select();
+  } else if (window.getSelection) {
+    var selection = window.getSelection();
+    var range = document.createRange();
+    range.selectNodeContents(element);
+    selection.removeAllRanges();
+    selection.addRange(range);
+  }
+}
+$(".copyable").click(function (e) {
+  //Make the container Div contenteditable
+  $(this).attr("contenteditable", true);
+  //Select the image
+  SelectText($(this).get(0));
+  //Execute copy Command
+  //Note: This will ONLY work directly inside a click listenner
+  document.execCommand('copy');
+  //Unselect the content
+  window.getSelection().removeAllRanges();
+  //Make the container Div uneditable again
+  $(this).removeAttr("contenteditable");
+  //Success!!
+  alert("image copied!");
+});
+
+var PUBLIC_KEY = 'dc6zaTOxFJmzC';
+var BASE_URL = '//api.giphy.com/v1/gifs/';
+var ENDPOINT = 'search';
+var LIMIT = 1;
+var RATING = 'pg';
+
+var $queryInput = $('.query');
+var $resultWrapper = $('.result');
+var $loader = $('.loader');
+var $inputWrapper = $('.input-wrapper');
+var $clear = $('.clear');
+var $button = $('.random');
+var $copy = $('.copy');
+var currentTimeout = undefined;
+
+var query = {
+  text: null,
+  offset: 0,
+  request: function request() {
+    return "" + BASE_URL + ENDPOINT + "?q=" + this.text + "&limit=" + LIMIT + "&rating=" + RATING + "&offset=" + this.offset + "&api_key=" + PUBLIC_KEY;
+  },
+  fetch: function fetch(callback) {
+    $.getJSON(this.request()).success(function (data) {
+      var results = data.data;
+
+      if (results.length) {
+        var url = results[0].images.downsized.url;
+        console.log(results);
+        callback(url);
+      } else {
+        callback('');
+      }
+    }).fail(function (error) {
+      console.log(error);
+    });
+  }
+};
+
+function buildImg() {
+  var src = arguments.length <= 0 || arguments[0] === undefined ? '//giphy.com/embed/xv3WUrBxWkUPC' : arguments[0];
+  var classes = arguments.length <= 1 || arguments[1] === undefined ? 'gif hidden' : arguments[1];
+
+  return "<img src=\"" + src + "\" class=\"" + classes + "\" alt=\"gif\"  onclick=\"copyToClipboard('#gif')\"/>";
+}
+
+$clear.on('click', function (e) {
+  $queryInput.val('');
+  $inputWrapper.removeClass('active').addClass('empty');
+  $('.gif').addClass('hidden');
+  $loader.removeClass('done');
+  $button.removeClass('active');
+  $copy.removeClass('active');
+});
+
+$button.on('click', function (e) {
+  query.offset = Math.floor(Math.random() * 25);
+
+  query.fetch(function (url) {
+    if (url.length) {
+      $resultWrapper.html(buildImg(url));
+
+      $button.addClass('active');
+      $copy.addClass('active');
+    } else {
+      $resultWrapper.html("<p class=\"no-results hidden\">No Results found for <strong>" + query.text + "</strong></p>");
+
+      $button.removeClass('active');
+    }
+
+    $loader.addClass('done');
+    currentTimeout = setTimeout(function () {
+      $('.hidden').toggleClass('hidden');
+    }, 1000);
+  });
+});
+
+$queryInput.on('keyup', function (e) {
+  var key = e.which || e.keyCode;
+  query.text = $queryInput.val();
+  query.offset = Math.floor(Math.random() * 25);
+
+  if (currentTimeout) {
+    clearTimeout(currentTimeout);
+    $loader.removeClass('done');
+  }
+
+  currentTimeout = setTimeout(function () {
+    currentTimeout = null;
+    $('.gif').addClass('hidden');
+
+    if (query.text && query.text.length) {
+      $inputWrapper.addClass('active').removeClass('empty');
+
+      query.fetch(function (url) {
+        if (url.length) {
+          $resultWrapper.html(buildImg(url));
+
+          $button.addClass('active');
+        } else {
+          $resultWrapper.html("<p class=\"no-results hidden\">No Results found for <strong>" + query.text + "</strong></p>");
+
+          $button.removeClass('active');
+        }
+
+        $loader.addClass('done');
+        currentTimeout = setTimeout(function () {
+          $('.hidden').toggleClass('hidden');
+        }, 1000);
+      });
+    } else {
+      $inputWrapper.removeClass('active').addClass('empty');
+      $button.removeClass('active');
+    }
+  }, 1000);
+});
+  //# sourceURL=pen.js
+  </script>
+
+  
+  
+
+</body>
+</html>
+ 
