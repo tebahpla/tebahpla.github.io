@@ -16,7 +16,13 @@ request.onload = function() {
         console.log('reached giphy, but API returned an error');
      }
 };
-}
+
+request.onerror = function() {
+    console.log('connection error');
+};
+
+request.send();
+});
 </script>
 <h1> Let's Search Some Gifs! </h1>
 <div class="info">
