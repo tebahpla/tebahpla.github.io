@@ -1,0 +1,93 @@
+
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon"  href="pootubeicon.png" />
+  
+  <title>PooTube - YouTube Video Gettter</title>
+  
+  
+  
+  
+      <style>
+      input{
+  width: 250px;
+}
+#vid{
+  background: white;
+  height: 315px;
+}
+h1 {
+  font-family: 'Barlow Condensed', sans-serif;
+font-weight: normal;
+}
+h3{
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 500;
+  
+
+}
+#coverall{
+  top: auto;
+    margin-left: auto ;
+  margin-right: auto ;
+}
+    </style>
+
+  
+  
+  
+  
+</head>
+
+<body translate="no" >
+
+  <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed" rel="stylesheet">
+
+<div align='center'>
+<img src='https://github.com/tebahpla/tebahpla.github.io/blob/master/pootube.png?raw=true' width='255' align='center'>
+</div>
+<div align='center' id='coverall'>
+  <h1>YouTube Video Gettter</h1>
+  <h3>+embed code for Oogle Chat and other sevices</h3>
+  <input id='url1' oninput='getthevidthing()' placeholder='Paste the YouTube link in here'>
+  <br><br>
+  <div id='vid' width="560" height="315">
+    
+  </div><br>
+  <input id='embedcode' placeholder='The code to copy and paste will be here'>
+</div>
+  
+  
+    <script >
+    var yurl;
+function getthevidthing(){
+  yurl = document.getElementById('url1').value;
+ yurl = yurl.replace(/https:\/\/www.youtube.com\/watch/gi, "https://tubeunblock.me/embed")
+ yurl = yurl.replace(/https:\/\/youtu.be\//gi, "https://tubeunblock.me/embed?v=")
+   yurl = yurl.replace(/https:\/\/m.youtube.com\/watch/gi, "https://tubeunblock.me/embed")
+
+  yurl = yurl.replace(/http:\/\/www.youtube.com\/watch/gi, "https://tubeunblock.me/embed")
+ yurl = yurl.replace(/http:\/\/youtu.be\//gi, "https://tubeunblock.me/embed?v=")
+   yurl = yurl.replace(/http:\/\/m.youtube.com\/watch/gi, "https://tubeunblock.me/embed")
+   yurl = yurl.replace(/m.youtube.com\/watch/gi, "https://tubeunblock.me/embed")
+    yurl = yurl.replace(/www.youtube.com\/watch/gi, "https://tubeunblock.me/embed")
+    yurl = yurl.replace(/youtube.com\/watch/gi, "https://tubeunblock.me/embed")
+  yurl = 
+  yurl.replace(/youtu.be\//gi, "https://tubeunblock.me/embed?v=")
+ 
+
+  document.getElementById('vid').innerHTML='<iframe width="560" height="315" src="'+yurl+'" allowfullscreen>'
+  document.getElementById('embedcode').value='<iframe width="560" height="315" src="'+yurl+'" allowfullscreen>'
+}
+  </script>
+
+  
+  
+
+</body>
+</html>
+ 
