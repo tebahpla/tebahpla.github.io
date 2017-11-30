@@ -63,7 +63,7 @@ h3{
   
   
     <script >
-    var yurl;
+ var yurl;
 function getthevidthing(){
   yurl = document.getElementById('url1').value;
  yurl = yurl.replace(/https:\/\/www.youtube.com\/watch/gi, "https://tubeunblock.me/embed")
@@ -80,8 +80,8 @@ function getthevidthing(){
   yurl.replace(/youtu.be\//gi, "https://tubeunblock.me/embed?v=")
  
 
-  document.getElementById('vid').innerHTML='<iframe width="560" height="315" src="'+yurl+'" allowfullscreen>'
-  document.getElementById('embedcode').value='<iframe width="560" height="315" src="'+yurl+'" allowfullscreen>'
+  document.getElementById('vid').innerHTML='<iframe width="560" height="315" src="'+yurl+'" allowfullscreen></iframe>'
+  document.getElementById('embedcode').value='<iframe width="560" height="315" src="'+yurl+'" allowfullscreen></iframe>'
 }
   </script>
 
