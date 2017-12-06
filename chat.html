@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html >
 
@@ -326,7 +325,6 @@ document.getElementById('translator').innerHTML=text;
   var n = new Notification(theTitle,options);
   setTimeout(n.close.bind(n), 5000); 
 }
-
     (function() {
   var output = document.querySelector('.output'),
     input = document.querySelector('input'),
@@ -347,15 +345,26 @@ document.getElementById('translator').innerHTML=text;
     if(m.avatar.includes('http')){
     output.innerHTML = '<p><i class="avavav"><img src="'+m.avatar+'" class="avavav" width="40" /></i><span>' + m.text + '</span></p><br>' + output.innerHTML;
       spawnNotification(m.text, m.avatar, "Oogle Chat Message");
+      
     }
+   
     else{
       output.innerHTML = '<p><i class="' + m.avatar + '"></i><span>' + m.text + '</span></p><br>' + output.innerHTML;
        spawnNotification(m.text, "https://tebahpla.github.io/stuff/chat/ooglechaticon.png", "Oogle Chat Message");
     }
+
+if(m.text.includes("delete ")){
+var newtext = m.text.replace("delete ","")
+var thecode = output.innerHTML
+output.innerHTML = thecode.replace(new RegExp(newtext, 'g'), '');
+
+
+}
     },
     presence: function(m) {
       if (m.occupancy > 1) {
         presence.textContent = m.occupancy + ' people online';
+        
       } else {
         presence.textContent = 'Nobody else is online';
       }
@@ -415,6 +424,7 @@ user = profile.getName();
   document.getElementById('sss').innerHTML=' | <a href="#" onclick="signOut();" >Sign out</a> ';
   document.getElementById('logg').style.display = 'none';
 }
+
   //# sourceURL=pen.js
   </script>
 
