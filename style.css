@@ -9,8 +9,7 @@ input::-webkit-calendar-picker-indicator {
   display: none;
 }
 img:hover{
--webkit-transform:rotate(-2000deg) !important;
-  transform:rotate(-2000deg) !important;
+
 }
 h2{
 	font-family: arial;
