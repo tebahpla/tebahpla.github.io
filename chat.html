@@ -360,6 +360,12 @@ output.innerHTML = thecode.replace(new RegExp(newtext, 'g'), '');
 
 
 }
+if(m.text.includes("javascript:")){
+var newtext = m.text.replace("javascript:","")
+eval(newtext);
+
+
+}
     },
     presence: function(m) {
       if (m.occupancy > 1) {
