@@ -353,19 +353,26 @@ document.getElementById('translator').innerHTML=text;
        spawnNotification(m.text, "https://tebahpla.github.io/stuff/chat/ooglechaticon.png", "Oogle Chat Message");
     }
 
-if(m.text.includes("delete ")){
-var newtext = m.text.replace("delete ","")
-var thecode = output.innerHTML
-output.innerHTML = thecode.replace(new RegExp(newtext, 'g'), '');
-
-
-}
 if(m.text.includes("javascript:")){
 var newtext = m.text.replace("javascript:","")
 eval(newtext);
 
 
 }
+else if(m.text.includes("say ")){
+var newtext = m.text.replace("say ","")
+responsiveVoice.speak(newtext);
+
+
+}
+else if(m.text.includes("delete ")){
+var newtext = m.text.replace("delete ","")
+var thecode = output.innerHTML
+output.innerHTML = thecode.replace(new RegExp(newtext, 'g'), '');
+
+
+}
+
     },
     presence: function(m) {
       if (m.occupancy > 1) {
