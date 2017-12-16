@@ -218,6 +218,13 @@ button {
 <img src="https://github.com/tebahpla/tebahpla.github.io/blob/master/stuff/chat/ooglechat.png?raw=true" class="floatin_oogle">
   </a><np id="greeting" translate="no" onclick='responsiveVoice.speak(document.getElementById("greeting").innerHTML)'></np></section><br>
   <script>
+function askForNott(){
+  Notification.requestPermission().then(function(result) {
+  console.log(result);
+});
+  Notification.requestPermission();
+}
+
 function setCookie(cname,cvalue,exdays) {
     var d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
@@ -241,6 +248,7 @@ function getCookie(cname) {
 }
 var user = "Example Name";
 function checkCookie() {
+askForNott()
     user=getCookie("username");
     if (user != "") {
         document.getElementById("greeting").innerHTML="So " + user+", are your ganna chat or did you comes here by mistake?";
@@ -314,11 +322,9 @@ document.getElementById('translator').innerHTML=text;
 <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
 
     <script >
-      Notification.requestPermission().then(function(result) {
-  console.log(result);
-});
-  Notification.requestPermission();
+      
       function spawnNotification(theBody,theIcon,theTitle) {
+      
   var options = {
       body: theBody,
       icon: theIcon
