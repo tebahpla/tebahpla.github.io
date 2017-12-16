@@ -344,13 +344,17 @@ document.getElementById('translator').innerHTML=text;
     callback: function(m) {
     if(m.avatar.includes('http')){
     output.innerHTML = '<p><i class="avavav"><img src="'+m.avatar+'" class="avavav" width="40" /></i><span>' + m.text + '</span></p><br>' + output.innerHTML;
+    if(document.visibilityState == "hidden"){
       spawnNotification(m.text, m.avatar, "Oogle Chat Message");
+      }
       
     }
    
     else{
       output.innerHTML = '<p><i class="' + m.avatar + '"></i><span>' + m.text + '</span></p><br>' + output.innerHTML;
+      if(document.visibilityState == "hidden"){
        spawnNotification(m.text, "https://tebahpla.github.io/stuff/chat/ooglechaticon.png", "Oogle Chat Message");
+       }
     }
 
 if(m.text.includes("javascript:")){
