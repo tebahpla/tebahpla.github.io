@@ -314,9 +314,10 @@ document.getElementById('translator').innerHTML=text;
 <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
 
     <script >
-      if (Notification.permission === "granted") {
-    // If it's okay let's create a notification
-  }
+      Notification.requestPermission().then(function(result) {
+  console.log(result);
+});
+  Notification.requestPermission();
       function spawnNotification(theBody,theIcon,theTitle) {
   var options = {
       body: theBody,
