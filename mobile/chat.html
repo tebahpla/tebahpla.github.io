@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html >
 <style>
-  img,iframe{ width: 95%;}
+  .floatin_oogle,iframe{ width: 95%;}
   </style>
 <head>
   <meta name=viewport content="width=device-width, initial-scale=1">
@@ -163,6 +163,7 @@ button {
   margin: .5em 0 2em 0;
   width: 70px;
 }
+#profile{ width: calc(100% - 175px) !important;}
 #main {
   margin: 2em 1em 1em;
 }
@@ -540,7 +541,7 @@ user = profile.getName();
     setCookie("username", user, 3000);
     setCookie("signed", "yes", 3000);
   }
-  document.getElementById('sss').innerHTML=' | <a href="#" onclick="signOut();" >Sign out</a> ';
+  document.getElementById('sss').innerHTML=' <a href="#" onclick="signOut();" >Sign out</a> ';
   document.getElementById('logg').style.display = 'none';
 }
 
