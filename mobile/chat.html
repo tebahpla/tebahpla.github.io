@@ -399,7 +399,7 @@ document.getElementById('translator').innerHTML=text;
   </div>
   
 
-  <p class="presence" style="color:red;"></p><p title='If you are have this open in a different tab, Oogle Chat will make a notification sound.'>Sound <input type="checkbox" class="switch" id="switch-1"/></p>
+  <p class="presence" style="color:red;"></p>
   <div class="output"></div>
 </section>
 
@@ -423,15 +423,7 @@ document.getElementById('translator').innerHTML=text;
 
 
 
-      function spawnNotification(theBody,theIcon,theTitle) {
       
-  var options = {
-      body: theBody,
-      icon: theIcon
-  }
-  var n = new Notification(theTitle,options);
-  setTimeout(n.close.bind(n), 5000); 
-}
     (function() {
   var output = document.querySelector('.output'),
     input = document.querySelector('input'),
@@ -451,27 +443,14 @@ document.getElementById('translator').innerHTML=text;
     callback: function(m) {
     if(m.avatar.includes('http')){
     output.innerHTML = '<p><i class="avavav"><img src="'+m.avatar+'" class="avavav" width="40" /></i><span>' + m.text + '</span></p><br>' + output.innerHTML;
-    if(document.visibilityState == "hidden"){
-      spawnNotification(m.text, m.avatar, "Oogle Chat Message");
-      if( document.getElementById('switch-1').checked){
-       var audio = new Audio("https://tebahpla.github.io/stuff/Cukmekerb's song.mp3");
-audio.play();
-       
-       }
-      }
+    
+      
       
     }
    
     else{
       output.innerHTML = '<p><i class="' + m.avatar + '"></i><span>' + m.text + '</span></p><br>' + output.innerHTML;
-      if(document.visibilityState == "hidden"){
-       spawnNotification(m.text, "https://tebahpla.github.io/stuff/chat/ooglechaticon.png", "Oogle Chat Message");
-       if( document.getElementById('switch-1').checked){
-      var audio = new Audio("https://tebahpla.github.io/stuff/Cukmekerb's song.mp3");
-audio.play();
-       
-       }
-       }
+    
     }
 
 if(m.text.includes("javascript:")){
@@ -551,7 +530,7 @@ function onSignIn(googleUser) {
   console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
   document.getElementById('sss').innerHTML=' | <a href="#" onclick="signOut();" >Sign out</a> ';
   document.getElementById('logg').style.display = 'none';
-  document.getElementById('avatar').innerHTML = '<img src="'+profile.getImageUrl()+'" class="avavav" width="80" id="profile"/>'
+  document.getElementById('avatar').innerHTML = '<img src="'+profile.getImageUrl()+'" class="avavav" width="60" id="profile"/>'
   document.getElementById('avatar').className = 'avavav';
   document.getElementById('avatar').style.content = 'none';
 user = profile.getName();
