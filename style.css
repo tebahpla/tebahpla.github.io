@@ -149,7 +149,7 @@ iframe{
   border-color: white;  
   
 }
-    img {
+    img:not(.pooemoji) {
         
     
         display: block;
