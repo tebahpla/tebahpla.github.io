@@ -340,8 +340,17 @@ function analise(){
       say("I'm sorry "+user+",   I'm afraid I cannot do that.")
     }
   }
- else if(whatYouSaid == 'Make me bored'|| whatYouSaid == 'make me bored' || whatYouSaid.includes('bore') || whatYouSaid.includes('Bore')){
-    say("magna fermentum iaculis eu non diam phasellus vestibulum lorem sed risus ultricies tristique crap nulla aliquet enim tortor at auctor urna nunc id cursus metus aliquam eleifend shit mi in I nulla posuere sollicitudin like aliquam ultrices sagittis trains orci damn a scelerisque purus semper eget duis at tellus at urna condimentum mattis pellentesque id nibh")
+ else if(whatYouSaid == 'Make me bored'|| whatYouSaid == 'make me bored' || whatYouSaid.includes('bore') || whatYouSaid.includes('Bore') || whatYouSaid.includes('pi') || whatYouSaid.includes('Pi')){
+    var whut;
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+	    whut = this.responseText;
+      say(whut);
+	 
+    };
+      xhttp.open("GET", "pi.txt", true);
+  xhttp.send();
   }
   else if(whatYouSaid.includes('bathroom')|| whatYouSaid.includes('Bathroom') || whatYouSaid.includes('toilet') || whatYouSaid.includes('Toilet') || whatYouSaid.includes('restroom') || whatYouSaid.includes('Restroom') || whatYouSaid.includes('loo') || whatYouSaid.includes('Loo')){
     say("Did you know urinating is social? According to the Inventively Cooperative Urinal Project, or more commonly ICUP, having conversations while urinating can improve the health of small-bladdered people such as yourself. They are currently instaling three-person urinals in public bathrooms throughout the puget sound area.")
