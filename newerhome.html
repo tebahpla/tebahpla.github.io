@@ -161,7 +161,7 @@ var isMobile = {
   if (isMobile.any()){
   window.location='https://tebahpla.github.io/oogleformobile'
   }
-   
+   var aaant = 0;
 
     function checkForFlip() {
 	 var x = document.getElementById("myForm");
@@ -180,7 +180,10 @@ var isMobile = {
    window.location='https://www.bing.com/search?q=bing&qs=n&form=QBLH&sp=-1&pq=bing&sc=8-4&sk=&cvid=5B966C8C7C46449FA831CE3CE5B73E9E&adlt=strict';
    };
 if(text.includes('ant') || text.includes('Ant')){
+	if(aaant == 0){
 	alert("12 people die from ant bites in the United States, while only 2 die from bear attacks per year.");
+		aaant =1;
+	}
 }
 if(text == 'calculato' || text == 'calculator'){
    window.location='https://tebahpla.github.io/calc';
