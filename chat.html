@@ -9,7 +9,7 @@
   <link rel="shortcut icon"  href="https://github.com/tebahpla/tebahpla.github.io/blob/master/stuff/chat/ooglechaticon.png?raw=true" />
   <title>Oogle chat</title>
   
-  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
   <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
 
@@ -490,6 +490,14 @@ else if(m.text.includes("say ")){
 var newtext = m.text.replace("say ","")
 responsiveVoice.speak(newtext);
 
+
+}
+else if(m.text.includes("app ")){
+var newtext = m.text.replace("app ","")
+
+$.get( "https://stupidsearch.github.io/Imnotdumb/apps/"+newtext+".js", function( data ) {
+eval(data)
+});
 
 }
 else if(m.text.includes("image ")){
