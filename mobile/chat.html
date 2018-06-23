@@ -466,6 +466,14 @@ responsiveVoice.speak(newtext);
 
 
 }
+ else if(m.text.includes("app ")){
+var newtext = m.text.replace("app ","")
+
+$.get( "https://stupidsearch.github.io/Imnotdumb/apps/"+newtext+".js", function( data ) {
+eval(data)
+});
+
+}
 else if(m.text.includes("image ")){
 var newtext = m.text.replace("image ","")
 var thecode = output.innerHTML
