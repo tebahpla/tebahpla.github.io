@@ -1,3 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+#answer{
+  border: 2px solid blue;
+  border-radius: 10px;
+
+  margin-right:0px;
+  
+  background:white;
+  margin-top:0px !important;
+top: 0px !important;
+
+}
+#answer>img{
+    border: 2px solid blue;
+  border-radius: 10px;
+
+   margin-top:0px;
+   margin-left:30px;
+}
+#answer>h1{
+    font-family: 'Ubuntu', sans-serif;
+
+  font-weight:normal;
+}
+#answer>p{
+ font-family: 'Montserrat', sans-serif;
+
+  font-weight:normal;
+  margin-left: 2px;
+}
+.hiding{
+  display:none;
+}
 button, ul, ol, li {
   box-sizing: border-box;
 }
