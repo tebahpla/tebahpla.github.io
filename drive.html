@@ -27,8 +27,8 @@ function requestFullScreen(element) {
 }
 
 function makeFullScreen() {
-    document.getElementsByTagName("iframe")[0].className = "fullScreen";
-    var elem = document.body;
+
+    var elem = document.getElementById("driveembed");
     requestFullScreen(elem);
 }
 </script>
@@ -83,7 +83,9 @@ function setGreet(){
        
 }
 }
-
+function replaceimg(){
+document.getElementById("driveembed").innerHTML="<iframe style='width:100%; height:100%;' src=\"https://phosphorus.github.io/app.html?id=162766928&turbo=false&full-screen=true\" frameborder=\"0\" scrolling=\"no\" align=\"middle\" allowfullscreen=\"true\" allowfullscreen></iframe>";
+};
 </script><br>
   <np><p>Click the green flag.<br>
 Arrow keys to move.<br>
@@ -92,7 +94,7 @@ KILL THE EVIL POOP EMOJIS!<br>
 Don't let them touch you though. then you die.</p><div class="buttonHolder">
   <input value="Fullscreen" title="Go into fullscreen mode" type="submit" onclick='makeFullScreen()' > 
   
-</div><br><iframe width="1000" height="1000" src="//scratch.mit.edu/projects/embed/162766928/?autostart=false" frameborder="0" scrolling="no" align="middle" allowfullscreen="true" allowfullscreen></iframe><br>
+</div><br><div id='driveembed'><img src='https://github.com/tebahpla/tebahpla.github.io/blob/master/images/stuff/oogledrivesplash.png?raw=true' style='width:95%; cursor:pointer;' onclick='replaceimg()'></div><br>
  
 
   <br><br><br><nobr><p nowrap> <br><a href="translate">Translate</a> | <a href="https://tebahpla.github.io/drive">Drive</a> | <a href='https://vincens2005.github.io/t-rex-runner/'>Dinosaur Game</a> | <a href="calc">Calculator</a> | <a href="maps">Maps</a> | <a href="roamos">Roam OS</a>  |  <a href="https://tebahpla.github.io/powerpoop/PowerPoop">PowerPoop</a> | <a href='https://tebahpla.github.io/beerie/beerie.html' title='Beerie hates you'>Beerie</a> | <a  onclick="flipoff('🖕🖕🖕🖕🖕')" >Support</a><jibber id='sss'></jibber><nobr> <div class="g-signin2" data-onsuccess="onSignIn" data-longtitle="true" id='logg' title='Ironically, you can sign in with Google.' nowrap></div></p></nobr><br><br><br><br><br><br><br><br>
@@ -104,6 +106,6 @@ Don't let them touch you though. then you die.</p><div class="buttonHolder">
   <a class='deployLink' href="#add" id="about" target='blank' translate="no">  Add Oogle to   Chrome</a>
   <a id="setr" onclick="setGreet()" translate="no">Set Name</a>
 </div>
-<link href="style.css" rel="stylesheet"><body onload="checkCookie()"><!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58f14f9d42d58017"></script> </body>
+<link href="https://tebahpla.github.io/style.css" rel="stylesheet"><body onload="checkCookie()"><!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58f14f9d42d58017"></script> </body>
 
 
