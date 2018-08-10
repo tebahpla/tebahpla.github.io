@@ -75,13 +75,14 @@ window.setTimeout(mapsetup,1000);
 function mapsetup(){
 var map = new mapboxgl.Map({
 container: 'map',
-style: 'mapbox://styles/mapbox/streets-v10',
+style: 'mapbox://styles/cukmekerb/cjkoj2ug706hq2smwlk77suve',
 center: [long, lat], // starting position
 zoom:14,
 });
 map.addControl(new mapboxgl.NavigationControl());
 map.addControl(new mapboxgl.FullscreenControl());
 map.on('load', function() {
+
     map.loadImage('https://tebahpla.github.io/poop.png', function(error, image) {
         if (error) throw error;
         map.addImage('cat', image);
@@ -106,6 +107,7 @@ map.on('load', function() {
                 "icon-size": 0.8
             }
         });
+        
     });
 });
 };
