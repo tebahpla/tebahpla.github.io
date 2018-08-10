@@ -54,7 +54,7 @@ h2{
 	font-family: 'TypefaceEOT', 'TypefaceTTF', 'TypefaceSVG';
 }
 img{
- transition: 10s !important;
+ transition: 10s ;
 }
 #speaknow:hover{
 -webkit-transform:rotate(-2000deg) !important;
