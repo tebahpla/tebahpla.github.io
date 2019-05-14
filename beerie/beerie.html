@@ -256,7 +256,7 @@ body {
     <script >
     function say(re){
   document.getElementById('beerie-response').innerHTML = re;
-  responsiveVoice.speak(re);
+  responsiveVoice.speak(re, "Fallback UK Female");
 } 
 function getCookie(cname) {
     var name = cname + "=";
@@ -387,13 +387,13 @@ function analise(){
     
       };
       recognition.onerror = function(e) {
-      responsiveVoice.speak('there has been a speech recognition error. if you are using internet explorer, or microsoft edge, then you are a fucking idiot, and should use Chrome. if you are using chrome then refresh the page.');
+      responsiveVoice.speak('there has been a speech recognition error. if you are using internet explorer, or microsoft edge, then you are a fucking idiot, and should use Chrome. if you are using chrome then refresh the page.' , "Fallback UK Female");
 }
     }
   }
 
   function start(){
-   responsiveVoice.speak("Hi, I'm Beerie, yor virtual assistant. You can talk to me now.");
+   responsiveVoice.speak("Hi, I'm Beerie, yor virtual assistant. You can talk to me now." , "Fallback UK Female");
    
  };
   start();
