@@ -11,6 +11,9 @@
 top: 0px !important;
 
 }
+.gcsc-more-maybe-branding-root{
+  display:none !important;
+}
 #answer>img{
     border: 2px solid blue;
   border-radius: 10px;
