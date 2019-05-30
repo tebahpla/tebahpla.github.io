@@ -1,7 +1,7 @@
 $("button").hover(
   function() {
     var self = this;
-    var pos = -(Math.floor(Math.random() * 18) + 1) * 55;
+    var pos = -(Math.floor(Math.random() * 19) + 1) * 55;
     setTimeout(function() {
       $(self).find("ul").css("margin-top", pos + "px");
     }, 500);
@@ -12,7 +12,7 @@ $("button").hover(
 );$("button").hover(
   function() {
     var self = this;
-    var pos = -(Math.floor(Math.random() * 18) + 1) * 55;
+    var pos = -(Math.floor(Math.random() * 19) + 1) * 55;
     setTimeout(function() {
       $(self).find("ul").css("margin-top", pos + "px");
     }, 500);
