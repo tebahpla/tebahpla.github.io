@@ -493,11 +493,15 @@ output.innerHTML = thecode.replace(new RegExp(newtext, 'g'), '');
 
     },
     presence: function(m) {
-      if (m.occupancy > 1) {
-        presence.textContent = m.occupancy + ' people online';
+     if (m.occupancy-1 > 1) {
+        presence.textContent = m.occupancy-1 + ' other people online';
+        
+      }
+      else if (m.occupancy-1 == 1) {
+        presence.textContent = m.occupancy-1 + ' other person online';
         
       } else {
-        presence.textContent = 'Nobody else is online';
+        presence.textContent = 'Nobody else is online :(';
       }
     }
   });
