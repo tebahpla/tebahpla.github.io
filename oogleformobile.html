@@ -60,8 +60,11 @@ var ID = "ssResults";
         return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());}
   } ;
   if (isMobile.any() != true){
-	  var poo = window.location;
-  window.location=poo.replace("oogleformobile","newoogle")
+	  var poo = window.location+"";
+     
+     var  doo=poo.replace('oogleformobile', 'newoogle')
+    
+  window.location=poo
   }
  
     var n = Date().includes("Feb 14");
