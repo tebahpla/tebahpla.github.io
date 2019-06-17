@@ -128,6 +128,35 @@ $( "#answer" ).removeClass( "hiding");document.getElementById("answer").innerHTM
     }
   </script>
   <script>
+      
+ var isMobile = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function() {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function() {
+        return navigator.userAgent.match(/iPhone|iPod/i);
+    },
+    
+    Opera: function() {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function() {
+        return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function() {
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());}
+  } ;
+  if (isMobile.any() ){
+	  var poo = window.location+"";
+     
+     var  doo=poo.replace('newoogle', 'oogleformobile')
+   
+  window.location=doo
+  }
+
     var n = Date().includes("Feb 14");
     var m = Date().includes("Wed Jul 05");
      var pride = Date().includes("Jun");
