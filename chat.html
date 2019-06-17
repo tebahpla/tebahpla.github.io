@@ -322,6 +322,29 @@ button {
 <img src="https://github.com/tebahpla/tebahpla.github.io/blob/master/stuff/chat/ooglechat.png?raw=true" class="floatin_oogle">
   </a><np id="greeting" translate="no" onclick='responsiveVoice.speak(document.getElementById("greeting").innerHTML)'></np></section><br>
   <script>
+      var isMobile = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function() {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function() {
+        return navigator.userAgent.match(/iPhone|iPod/i);
+    },
+    
+    Opera: function() {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function() {
+        return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function() {
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());}
+  } ;
+  if (isMobile.any()){
+window.location="https://tebahpla.github.io/mobile/chat";
+  }
 function askForNott(){
   Notification.requestPermission().then(function(result) {
   console.log(result);
