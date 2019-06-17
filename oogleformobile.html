@@ -59,7 +59,7 @@ var ID = "ssResults";
     any: function() {
         return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());}
   } ;
-  if (isMobile.any() != true){
+  if (isMobile.any() == null){
 	  var poo = window.location+"";
      
      var  doo=poo.replace('oogleformobile', 'newoogle')
