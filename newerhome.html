@@ -280,9 +280,9 @@ user = profile.getName();
   }
 
   var linkcode = document.getElementById('links').innerHTML
-  linkcode=linkcode.replace('</p>',' | <a href="#" onclick="signOut();" >Sign out</a></p>'
+  linkcode=linkcode.replace('</p>',' | <a href="#" onclick="signOut();" >Sign out</a></p>')
   document.getElementById('links').innerHTML=linkcode;
-  document.getElementById('logg').style.display = 'none !important';
+  document.getElementById('logg').style.display = 'none';
 }
     
 function getCookie(cname) {
