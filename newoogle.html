@@ -224,7 +224,9 @@ user = profile.getName();
     setCookie("username", user, 3000);
     setCookie("signed", "yes", 3000);
   }
-  document.getElementById('sss').innerHTML=' | <a href="#" onclick="signOut();" >Sign out</a> ';
+ var linkcode = document.getElementById('links').innerHTML
+  linkcode=linkcode.replace('</p>',' | <a href="#" onclick="signOut();" >Sign out</a></p>')
+  document.getElementById('links').innerHTML=linkcode;
   document.getElementById('logg').style.display = 'none';
 }
     
