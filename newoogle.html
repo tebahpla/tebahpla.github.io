@@ -273,11 +273,12 @@ function flipoff(id){
 }
   
 function signOut() {
-    var auth2 = gapi.auth2.getAuthInstance();
+   var auth2 = gapi.auth2.getAuthInstance();
     auth2.signOut().then(function () {
-      console.log('User signed out.');
+      console.log('User signed out. Yey. Wonder why they did tho. WHY DID YOU SIGN OUT!!??!?!');
       document.getElementById('logg').style.display = 'block';
-      document.getElementById('sss').innerHTML='';
+      document.getElementById('links').innerHTML=document.getElementById('links').innerHTML.replace('<a href="#" onclick="signOut();" >Sign out</a>','');
+     
     });
   }
 
