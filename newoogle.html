@@ -272,12 +272,12 @@ function flipoff(id){
   if (e.style.display == 'block' || e.style.display=='') e.style.display = 'none'; else e.style.display = 'block';
 }
   
-function signOut() {
+  function signOut() {
    var auth2 = gapi.auth2.getAuthInstance();
     auth2.signOut().then(function () {
       console.log('User signed out. Yey. Wonder why they did tho. WHY DID YOU SIGN OUT!!??!?!');
       document.getElementById('logg').style.display = 'block';
-      document.getElementById('links').innerHTML=document.getElementById('links').innerHTML.replace('<a href="#" onclick="signOut();" >Sign out</a>','');
+      document.getElementById('links').innerHTML=document.getElementById('links').innerHTML.replace('| <a href=\"#\" onclick=\"signOut();\">Sign out</a>','');
      
     });
   }
