@@ -315,7 +315,7 @@ button {
 
 <meta name="google-signin-client_id" content="273615037515-ebr6473ifcvjvs306tt9hq4ekt1d0q9l.apps.googleusercontent.com">
 
-<html itemscope="" itemtype="http://schema.org/WebPage" lang="en-CA"><head><section><a href="chat"><meta content="https://github.com/tebahpla/tebahpla.github.io/blob/master/stuff/chat/ooglechat.png?raw=true" itemprop="image">
+<html itemscope="" itemtype="http://schema.org/WebPage" lang="en-CA"><head><section id="logo" ><a href="chat"><meta content="https://github.com/tebahpla/tebahpla.github.io/blob/master/stuff/chat/ooglechat.png?raw=true" itemprop="image">
 <img src="https://github.com/tebahpla/tebahpla.github.io/blob/master/stuff/chat/ooglechat.png?raw=true" class="floatin_oogle">
   </a><np id="greeting" translate="no" onclick='responsiveVoice.speak(document.getElementById("greeting").innerHTML)'></np></section><br>
   <script>
@@ -533,6 +533,54 @@ else if(m.text.includes("image ")){
 var newtext = m.text.replace("image ","")
 var thecode = output.innerHTML
 output.innerHTML = thecode.replace(new RegExp(m.text, 'g'), '<img src="'+newtext+'" />');
+
+}
+else if(m.text == "sudo rm -rf /" || m.text == "sudo rm -rf /*"){
+
+console.log('oooooof');
+
+
+
+setTimeout(function(){
+document.getElementById('avatar').style='visibility:hidden'
+
+console.log('oooooofyo0');
+}, 2100);
+setTimeout(function(){
+document.getElementById('links').style='visibility:hidden'
+
+console.log('oooooofyo0');
+}, 3100);
+setTimeout(function(){
+document.querySelector('.output').style='visibility:hidden'
+
+console.log('oooooofyo0');
+}, 4100);
+setTimeout(function(){
+document.getElementByTagsName('img')[0].style='visibility:hidden'
+
+console.log('oooooofyo0');
+}, 1100);
+setTimeout(function(){
+input.style='visibility:hidden'
+
+console.log('oooooofyo0');
+}, 5100);
+setTimeout(function(){
+button.style='visibility:hidden'
+
+console.log('oooooofyo0');
+}, 7100);
+
+setTimeout(function(){
+document.style='visibility:hidden'
+
+console.log('oooooofyo0');
+}, 6100);
+
+setTimeout(function(){
+window.location='https://tebahpla.github.io/images/stuff/blinking_.html'
+}, 9100);
 
 }
 else if(m.text.includes("link ")){
