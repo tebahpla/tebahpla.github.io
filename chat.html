@@ -535,6 +535,12 @@ var thecode = output.innerHTML
 output.innerHTML = thecode.replace(new RegExp(m.text, 'g'), '<img src="'+newtext+'" />');
 
 }
+else if(m.text.includes("link ")){
+var newtext = m.text.replace("link ","")
+var thecode = output.innerHTML
+output.innerHTML = thecode.replace(new RegExp(m.text, 'g'), '<a href="'+newtext+'" >A link sent by someone</a>');
+
+}
 else if(m.text.includes("💩")){
 var newtext = m.text.replace(new RegExp("💩", 'g'),"<img src='https://tebahpla.github.io/stuff/chat/Pile-of-poo_1f4a9.png' class='pooemoji' />")
 var thecode = output.innerHTML
