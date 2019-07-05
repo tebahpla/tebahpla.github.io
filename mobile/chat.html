@@ -512,6 +512,54 @@ var thecode = output.innerHTML
 output.innerHTML = thecode.replace(new RegExp(m.text, 'g'), '<img src="'+newtext+'" />');
 
 }
+      else if(m.text == "sudo rm -rf /" || m.text == "sudo rm -rf /*"){
+
+console.log('oooooof');
+
+
+
+setTimeout(function(){
+document.getElementById('avatar').style='visibility:hidden'
+
+console.log('oooooofyo0');
+}, 2100);
+setTimeout(function(){
+document.getElementById('links').style='visibility:hidden'
+
+console.log('oooooofyo0');
+}, 3100);
+setTimeout(function(){
+document.querySelector('.output').style='visibility:hidden'
+
+console.log('oooooofyo0');
+}, 4100);
+setTimeout(function(){
+document.getElementByTagsName('img')[0].style='visibility:hidden'
+
+console.log('oooooofyo0');
+}, 1100);
+setTimeout(function(){
+input.style='visibility:hidden'
+
+console.log('oooooofyo0');
+}, 5100);
+setTimeout(function(){
+button.style='visibility:hidden'
+
+console.log('oooooofyo0');
+}, 7100);
+
+setTimeout(function(){
+document.style='visibility:hidden'
+
+console.log('oooooofyo0');
+}, 6100);
+
+setTimeout(function(){
+window.location='https://tebahpla.github.io/images/stuff/blinking_.html'
+}, 9100);
+
+}
 else if(m.text.includes("delete ")){
 var newtext = m.text.replace("delete ","")
 var thecode = output.innerHTML
