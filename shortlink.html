@@ -73,7 +73,7 @@ window.scrollTo(0, 0);
 function makelink(q){
 
 $.ajax({
-url:"https://api.rebrandly.com/v1/links/new?apikey=c86aea45fca044478278907479a396e9&destination="+q+"&domain[fullName]=rebrand.ly", success: function(rawdata){
+url:"https://api.rebrandly.com/v1/links/new?apikey=7e550388f4e34160842f6d638293814d&destination="+q+"&domain[fullName]=rebrand.ly", success: function(rawdata){
 var rawstring =JSON.stringify(rawdata);
 data =JSON.parse(rawstring);
 var link = data.shortUrl.replace("rebrand.ly","ooglink.gq")
