@@ -11,6 +11,9 @@
 top: 0px !important;
 
 }
+.gcsc-find-more-on-google-root{
+  display:none !important;
+}
 .gcsc-more-maybe-branding-root{
   display:none !important;
 }
