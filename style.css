@@ -17,6 +17,15 @@ top: 0px !important;
 .gcsc-more-maybe-branding-root{
   display:none !important;
 }
+#___gcse_0{
+position:absolute; 
+width:100%;
+top:0; 
+
+}
+.relative{
+position:relative
+}
 #answer>img{
     border: 2px solid blue;
   border-radius: 10px;
