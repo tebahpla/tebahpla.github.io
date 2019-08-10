@@ -77,7 +77,7 @@ url:"https://api.rebrandly.com/v1/links/new?apikey=7e550388f4e34160842f6d6382938
 var rawstring =JSON.stringify(rawdata);
 data =JSON.parse(rawstring);
 var link = data.shortUrl.replace("rebrand.ly","ooglink.gq")
-document.getElementById("output").innerHTML="<a href='http://"+link+"' target='_blank'>"+link+"</a> <img  onclick='copy(\""+link+"\")' src='https://www.materialui.co/materialIcons/content/content_copy_24px.svg' style='display: inline-block;'>";
+document.getElementById("output").innerHTML="<a href='https://"+link+"' target='_blank'>"+link+"</a> <img  onclick='copy(\""+link+"\")' src='https://www.materialui.co/materialIcons/content/content_copy_24px.svg' style='display: inline-block;'>";
 
 }}); }
 </script>
