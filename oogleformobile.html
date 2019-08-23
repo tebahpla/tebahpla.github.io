@@ -21,7 +21,7 @@ var ID = "ssResults";
 }
   </style>
   <title>Oogle</title>
-<link rel="shortcut icon" href="https://raw.githubusercontent.com/tebahpla/tebahpla.github.io/master/C--fakepath-favicon.png">
+<link rel="shortcut icon"  href="https://raw.githubusercontent.com/tebahpla/tebahpla.github.io/master/C--fakepath-favicon.png">
 <!doctype html><html itemscope="" itemtype="http://schema.org/WebPage" lang="en-CA"><head><section id="image"><a href="https://ooogle.github.io/app/thing#0"><meta content="https://github.com/tebahpla/tebahpla.github.io/blob/master/alternite_logos/bounceoogle.png?raw=true" itemprop="image" draggable="true">
 <img src="https://github.com/tebahpla/tebahpla.github.io/blob/master/ooglelogo.png.png?raw=true" class="floatin_oogle" draggable="true">
   </a></section><np id="greeting" ondblclick="setGreet()" draggable="true" onclick='responsiveVoice.speak(document.getElementById("greeting").innerHTML)'></np><br><script src="https://apis.google.com/js/platform.js" async defer></script><script src='https://code.responsivevoice.org/responsivevoice.js'></script>
@@ -69,7 +69,25 @@ var ID = "ssResults";
     
   window.location=doo
   }
+  
  
+function getanswer(q){
+
+if(q == "" || q == null){
+console.log("no title");
+}
+else{
+document.title=q+" - Oogle Search";
+
+}
+
+
+
+setTimeout(function(){ getanswer(document.getElementById('gsc-i-id1').value) }, 250);
+
+};
+
+
     var n = Date().includes("Feb 14");
     var m = Date().includes("Wed Jul 05");
         var pride = Date().includes("Jun");
@@ -80,7 +98,7 @@ var ID = "ssResults";
 var genocide =Date().includes("Oct 09");	  
 	  var nathaniel =Date().includes("Oct 21");
 	        var cookies = Date().includes("Nov 02");
-	  
+	
    
  if(n == true){
     document.getElementById("image").innerHTML='<a href="https://tebahpla.github.io/newerhome"><meta content="https://raw.githubusercontent.com/tebahpla/tebahpla.github.io/master/alternite_logos/ooglelogo%20v.png" itemprop="image"><img src="https://raw.githubusercontent.com/tebahpla/tebahpla.github.io/master/alternite_logos/ooglelogo%20v.png" class="floatin_oogle"></a>';
@@ -148,7 +166,7 @@ function getCookie(cname) {
 var user = "Example Name";
 function checkCookie() {
     user=getCookie("username");
-    
+    getanswer();
             
     if (user != "") {
         document.getElementById("greeting").innerHTML="Welcome back, " + user+".";
